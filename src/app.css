@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Nanum+Myeongjo&family=Noto+Sans+KR&family=Unbounded:wght@300&display=swap');
+
+body{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 10px;
+}
+
+.container{
+    max-width: 1056px;
+    margin: 0 auto;
+}
