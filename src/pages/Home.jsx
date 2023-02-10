@@ -3,10 +3,11 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Posts from '../container/Posts'
 import SearchForm from '../components/SearchForm'
+import { useRecoilValue,useRecoilState } from 'recoil'
 
 
 export default function Home() {
-  const [postItems, setPostItem] = useState([])
+  /* const [postItems, setPostItem] = useState([])
   const [searchKeyword, setSearchKeyword] = useState("")
 
   const handleSearchs = searchKeyword.length===0 ? postItems : postItems.filter((postItems)=>postItems.RCP_NM.includes(searchKeyword))
@@ -22,7 +23,7 @@ export default function Home() {
       console.log(err)
     })
     
-  },[])
+  },[]) */
  
   
   
@@ -30,10 +31,10 @@ export default function Home() {
     <div className='home'>
       <div className='container'>
         <div className='search'>
-          <SearchForm searchKeyword={searchKeyword} setSearchKeyword={setSearchKeyword}/>
+          <SearchForm /* searchKeyword={searchKeyword} setSearchKeyword={setSearchKeyword} *//>
         </div>
         <div className='posts'>
-          <Posts handleSearchs={handleSearchs}/>
+          <Posts /* handleSearchs={handleSearchs} *//>
         </div>
         
       </div>
