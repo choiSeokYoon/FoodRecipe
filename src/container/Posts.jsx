@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil'
 import { foodSearchAtom, recoilLimit,recoilPostsPage, recoilPageCount } from '../recoil/atom'
 import { fetchPostData } from '../recoil/selector'
 import Paging from '../components/pagination/Paging'
+import SearchForm from '../components/SearchForm'
 
 
 
@@ -27,20 +28,16 @@ export default function Posts() {
     
   return (
     <div className='post'>
-        
+        <SearchForm/>
         <Paging/>
         <label>
-            
             <select
                 type="number"
                 value={limit}
                 onChange={({ target: { value } }) => setLimit(Number(value))}
             >
-                
-                
                 <option value="20">20</option>
                 <option value="50">50</option>
-                
             </select>
         </label>
         <div className='post_list'>
