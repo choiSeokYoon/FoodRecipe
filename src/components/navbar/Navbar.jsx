@@ -1,4 +1,4 @@
-import SearchForm from '../SearchForm'
+
 import './Navbar.scss'
 import logoImg from '../../assets/h_logo.jpg'
 

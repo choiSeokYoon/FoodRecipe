@@ -1,12 +1,12 @@
 
 import './SearchForm.scss'
 import { useRecoilState } from 'recoil'
-import { foodAtom } from '../recoil/atom'
+import { foodSearchAtom } from '../recoil/atom'
 
 
 
 export default function SearchForm() {
-  const [searchKeyword, setSearchKeyword] = useRecoilState(foodAtom)
+  const [searchKeyword, setSearchKeyword] = useRecoilState(foodSearchAtom)
   
   return (
     <div className='search_form'>
