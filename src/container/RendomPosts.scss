@@ -10,7 +10,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        .swiper-pagination{
+            color: #c8a666;
+        }
         .slide_list{
             
             width: 100px;

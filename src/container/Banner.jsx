@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay} from "swiper";
+import { Pagination, Navigation, Autoplay, EffectFade} from "swiper";
 import bannerImg1 from '../assets/main_1.jpg'
 import bannerImg2 from '../assets/main_2.jpg'
 export default function Banner() {
@@ -13,15 +13,15 @@ export default function Banner() {
     <div className='banner'>
         <div className='slide'>
             <Swiper
-                modules={[Navigation, Pagination,Autoplay]}
+                modules={[Navigation, Pagination,Autoplay,EffectFade]}
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
-                
+                effect={"Fade"}
                 pagination={{
                     clickable: true,
                 }}
-                navigation={true}
+                
                 autoplay={{ delay: 3000 }}
                 className="slide_box"
             >

@@ -28,30 +28,36 @@ export default function Posts() {
     
   return (
     <div className='post'>
-        <SearchForm/>
-        <Paging/>
-        <label>
-            <select
-                type="number"
-                value={limit}
-                onChange={({ target: { value } }) => setLimit(Number(value))}
-            >
-                <option value="20">20</option>
-                <option value="50">50</option>
-            </select>
-        </label>
-        <div className='post_list'>
-            {/* {filteredFoods && filteredFoods.slice(offset, offset + limit).map((filteredFood,idx)=>(
-            <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
-                <div className='img_wrap'>
-                    <img src={filteredFood.ATT_FILE_NO_MAIN} alt="" />
-                </div>
-                <div className='post_text'>
-                    <p className='post_title'>{filteredFood.RCP_NM}</p>
-                </div>
-            </Link>
-            ))} */}
+        <div className='container'>
+            <div className='title'><h1>레시피</h1></div>
+            
+            {/* <label>
+                <select
+                    type="number"
+                    value={limit}
+                    onChange={({ target: { value } }) => setLimit(Number(value))}
+                >
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </label> */}
+            <div className='post_list'>
+                {filteredFoods && filteredFoods.slice(offset, offset + limit).map((filteredFood,idx)=>(
+                <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
+                    <div className='img_wrap'>
+                        <img src={filteredFood.ATT_FILE_NO_MAIN} alt="" />
+                    </div>
+                    <div className='post_text'>
+                        <p className='post_title'>{filteredFood.RCP_NM}</p>
+                    </div>
+                </Link>
+                ))}
+
+            </div>
+            <SearchForm/>
+            <Paging/>
         </div>
+        
        
       
     </div>

@@ -1,0 +1,24 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    
+    .pagination_btn_prev{
+        margin: 0 1rem;
+    }
+    .pagination_btn{
+        background: paleturquoise;
+        border: none;
+        border-radius: 50%;
+        margin: 0 .2rem;
+        padding: .5rem;
+        &.active{
+            background: palevioletred;
+        }
+    }
+    
+    
+    .pagination_btn_next{
+        margin: 0 1rem;
+
+    }
+}

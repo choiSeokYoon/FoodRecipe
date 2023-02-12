@@ -15,7 +15,7 @@ export const recoilPostsPage = atom({
 
 export const recoilLimit = atom({
     key: "recoilLimit",
-    default: 20
+    default: 12
 })
 
 export const recoilPageCount = atom({

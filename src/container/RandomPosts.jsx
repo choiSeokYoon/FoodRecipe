@@ -40,15 +40,11 @@ export default function RandomPosts() {
                 <h1>추천 레시피</h1>
             </div>
             <Swiper
-                modules={[Navigation,Autoplay]}
+                modules={[Navigation,Autoplay,Pagination]}
                 slidesPerView={4}
                 spaceBetween={30}
                 autoplay={{ delay: 3000 }}
                 loop={true}
-                
-                pagination={{
-                clickable: false,
-                }}
                 breakpoints= {{
                     
                     400:{
@@ -61,7 +57,9 @@ export default function RandomPosts() {
                         slidesPerView:4
                     }
                 }} 
-                    
+                pagination={{
+                    type: "progressbar"
+                }}
                 className="random_slide"
             >
             {randomPosts && randomPosts.map((randomPost,idx)=>(
