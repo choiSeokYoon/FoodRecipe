@@ -1,7 +1,7 @@
 import './Posts.scss'
 import { Link } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
-import { foodSearchAtom, recoilLimit,recoilPostsPage, recoilPageCount } from '../recoil/atom'
+import { foodSearchAtom, recoilLimit,recoilPostsPage } from '../recoil/atom'
 import { fetchPostData } from '../recoil/selector'
 import Paging from '../components/pagination/Paging'
 import SearchForm from '../components/SearchForm'

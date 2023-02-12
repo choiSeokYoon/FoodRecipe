@@ -24,11 +24,22 @@ export default function RandomPosts() {
     console.log(posts)
         
     
-    for(let i = 0; i < 10; i++){
-        let randomBox = posts[Math.floor(Math.random() * posts.length)+1]
+    /* for(let i = 0; i < 10; i++){
+        let randomBox = posts[Math.floor(Math.random() * posts.length)]
         randomPosts.push(randomBox)
+    } */
+    const [position, setPosition] = useState(0);
+
+    function onScroll(){
+        setPosition(window.scrollY)
     }
-        
+    useEffect(()=>{
+        window.addEventListener("scroll", onScroll);
+        return ()=>{
+            window.removeEventListener("scroll", onScroll)
+        }
+    }, [position])
+
     
     
     console.log(randomPosts)
@@ -36,7 +47,7 @@ export default function RandomPosts() {
   return (
     <div className='randomPosts'>
         <div className='container'>
-            <div className='title'>
+            <div className='title' style={{transform: `translateX(${-position}px)`}}>
                 <h1>추천 레시피</h1>
             </div>
             <Swiper
