@@ -41,7 +41,7 @@ export default function Posts() {
             </select>
         </label>
         <div className='post_list'>
-            {filteredFoods && filteredFoods.slice(offset, offset + limit).map((filteredFood,idx)=>(
+            {/* {filteredFoods && filteredFoods.slice(offset, offset + limit).map((filteredFood,idx)=>(
             <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
                 <div className='img_wrap'>
                     <img src={filteredFood.ATT_FILE_NO_MAIN} alt="" />
@@ -50,7 +50,7 @@ export default function Posts() {
                     <p className='post_title'>{filteredFood.RCP_NM}</p>
                 </div>
             </Link>
-            ))}
+            ))} */}
         </div>
        
       
