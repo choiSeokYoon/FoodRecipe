@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { recoilDetailData } from '../../recoil/atom'
 
 
 export default function DetailInfo() {
     const [detailPosts, setDetailPosts] = useRecoilState(recoilDetailData)
-    const dfoolfd = Object.values(detailPosts)
-    /* const sdakkdw = dfoolfd.filter((values) => detailPosts[values].indexOf("h"))  */ 
-    console.log(dfoolfd)
-    const sadkaskd = dfoolfd.filter(dlld => dlld.slice(70))
-    console.log(sadkaskd)
+    const [qwe,setQwe] = useState([])
+    /* const wdlkwdk = Object.entries(detailPosts)
+    console.log(detailPosts.RCP_PARTS_DTLS.slice(1,5))
+    console.log(wdlkwdk.filter((key)=>key.indexOf("H")))  */
+    const wdqwd = Object.entries(detailPosts).map(item => detailPosts[item]);
+    console.log(wdqwd)
+
+    /* const found = detailPosts.filter(it => it.includex("http"))
+    console.log(found) */
   return (
     <div className="detail_item_right">
         <div className='detail_name'>
