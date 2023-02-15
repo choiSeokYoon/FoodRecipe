@@ -29,6 +29,7 @@ export default function RandomPosts() {
         let randomBox = posts[Math.floor(Math.random() * posts.length)]
         randomPosts.push(randomBox)
     }
+    
 
   return (
     <div className='randomPosts'>

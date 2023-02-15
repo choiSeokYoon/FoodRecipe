@@ -15,13 +15,13 @@
         }
         .slide_list{
             
-            width: 100px;
+            
             .random_img{
                 
                 img{
                     width: 100%;
-                    height: 100%;
-                    background-size: cover;
+                    height: 300px;
+                    
                     margin-right: 0;
                     @media screen and (max-width:1300px) {
                         
