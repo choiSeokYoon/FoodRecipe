@@ -10,7 +10,10 @@ import DetailInfo from '../components/detail/DetailInfo'
 export default function DetailPost() {
   const [detailPosts,setDetailPosts] = useRecoilState(recoilDetailData)
   const {id} = useParams()
+ 
+  
 
+ 
   useEffect(()=>{
     const detailData = async ()=>{
       try{
@@ -24,7 +27,7 @@ export default function DetailPost() {
     }
     detailData();     
   }, [id])
-  
+
   return (
     detailPosts && (
       
