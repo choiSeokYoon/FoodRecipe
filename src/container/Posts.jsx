@@ -25,22 +25,16 @@ export default function Posts() {
         ? posts 
         : posts.filter((post)=>post.RCP_NM.includes(searchKeyword))
         
-    
+        console.log(typeof posts)
+        /* const wqosod = posts.map((post, index)=>{
+            console.log(post)
+        }) */
   return (
-    <div className='post'>
+    posts && (
+        <div className='post'>
         <div className='container'>
             <div className='title'><h1>레시피</h1></div>
-            
-            {/* <label>
-                <select
-                    type="number"
-                    value={limit}
-                    onChange={({ target: { value } }) => setLimit(Number(value))}
-                >
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                </select>
-            </label> */}
+            <SearchForm/>
             <div className='post_list'>
                 {filteredFoods && filteredFoods.slice(offset, offset + limit).map((filteredFood,idx)=>(
                 <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
@@ -54,12 +48,14 @@ export default function Posts() {
                 ))}
 
             </div>
-            <SearchForm/>
+            
             <Paging/>
         </div>
         
        
       
     </div>
+    )
+   
   )
 }

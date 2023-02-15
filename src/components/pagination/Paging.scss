@@ -1,7 +1,7 @@
 .pagination{
     display: flex;
     justify-content: center;
-    
+    padding: 5rem 0;
     .pagination_btn_prev{
         margin: 0 1rem;
     }
@@ -11,6 +11,7 @@
         border-radius: 50%;
         margin: 0 .2rem;
         padding: .5rem;
+        cursor: pointer;
         &.active{
             background: palevioletred;
         }

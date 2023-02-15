@@ -1,0 +1,27 @@
+.footer{
+    background: #ddd;
+    height: 200px;
+    
+    .foonter_box{
+        display: flex;
+        height: 100%;
+        .footer_left{
+            flex-basis: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: 3rem;
+            }
+        }
+        .footer_rigth{
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

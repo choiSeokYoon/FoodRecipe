@@ -20,34 +20,20 @@ import { Pagination , Autoplay, Navigation} from "swiper";
 export default function RandomPosts() {
     const [swiperRef, setSwiperRef] = useState(null);
     const [posts, setPosts] = useRecoilState(fetchPostData)
-    const [randomPosts, setRandomPosts] = useState([]) 
-    console.log(posts)
-        
+    const [randomPosts, setRandomPosts] = useState([])
     
-    /* for(let i = 0; i < 10; i++){
+    console.log(posts)
+    
+
+    for(let i = 0; i < 10; i++){
         let randomBox = posts[Math.floor(Math.random() * posts.length)]
         randomPosts.push(randomBox)
-    } */
-    const [position, setPosition] = useState(0);
-
-    function onScroll(){
-        setPosition(window.scrollY)
     }
-    useEffect(()=>{
-        window.addEventListener("scroll", onScroll);
-        return ()=>{
-            window.removeEventListener("scroll", onScroll)
-        }
-    }, [position])
-
-    
-    
-    console.log(randomPosts)
 
   return (
     <div className='randomPosts'>
         <div className='container'>
-            <div className='title' style={{transform: `translateX(${-position}px)`}}>
+            <div className='title' /* style={{transform: `translateX(${-position}px)`}} */>
                 <h1>추천 레시피</h1>
             </div>
             <Swiper
@@ -58,7 +44,7 @@ export default function RandomPosts() {
                 loop={true}
                 breakpoints= {{
                     
-                    400:{
+                    300:{
                         slidesPerView:2
                     },
                     800:{
@@ -89,9 +75,6 @@ export default function RandomPosts() {
             ))}
             </Swiper>
         </div>
-        
-        
-        
     </div>
   )
 }

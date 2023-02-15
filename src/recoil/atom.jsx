@@ -12,7 +12,7 @@ export const recoilPostsPage = atom({
     key: "recoilPostsPerPage",
     default: 1
 })
-
+//페이지네이션에 담은 아이템 숫자
 export const recoilLimit = atom({
     key: "recoilLimit",
     default: 12
@@ -21,5 +21,11 @@ export const recoilLimit = atom({
 export const recoilPageCount = atom({
     key: "recoilPageCount",
     default: 0
+})
+
+
+export const recoilDetailData = atom({
+    key: "recoilDetailData",
+    default: null
 })
 
