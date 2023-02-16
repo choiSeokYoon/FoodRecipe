@@ -5,6 +5,17 @@ import { recoilDetailData } from '../../recoil/atom'
 
 export default function DetailInfo() {
     const [detailPosts, setDetailPosts] = useRecoilState(recoilDetailData)
+    const [qqqq, bbbb] = useState ([])
+    const wdioid = Object.values(detailPosts)
+    console.log(wdioid.indexOf("http://www.foodsafetykorea.go.kr/uploadimg/20230206/20230206054834_1675673314720.jpg"))
+
+
+    /* for(let key in detailPosts) {
+        if(key.includes("MANUAL")){
+            bbbb([detailPosts])
+        }
+    } */
+   
     /* const wdlkwdk = Object.entries(detailPosts)
     console.log(detailPosts.RCP_PARTS_DTLS.slice(1,5))
     console.log(wdlkwdk.filter((key)=>key.indexOf("H")))  */

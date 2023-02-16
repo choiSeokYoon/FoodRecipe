@@ -5,10 +5,15 @@
         
         .slide_box{}
         .swiperSlide{
+            position: relative;
             img{
                 width: 100%;
                 height: 100%;
                 background-size: cover;
+            }
+            p{
+                position: absolute;
+                z-index: 30;
             }
         }
     }

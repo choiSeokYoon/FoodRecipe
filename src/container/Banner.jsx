@@ -25,8 +25,14 @@ export default function Banner() {
                 autoplay={{ delay: 3000 }}
                 className="slide_box"
             >
-            <SwiperSlide className='swiperSlide' ><img src={bannerImg1} alt="" /></SwiperSlide>
-            <SwiperSlide className='swiperSlide'><img src={bannerImg2} alt="" /></SwiperSlide>
+            <SwiperSlide className='swiperSlide' >
+              <img src={bannerImg1} alt="" />
+              <p>한끼에 담은 오늘의 </p>
+            </SwiperSlide>
+            <SwiperSlide className='swiperSlide'>
+              <img src={bannerImg2} alt="" />
+              <p>한끼에 담은 오늘의 </p>
+            </SwiperSlide>
         
       </Swiper>
         </div>
