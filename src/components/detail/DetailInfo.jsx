@@ -10,11 +10,12 @@ export default function DetailInfo() {
     console.log(wdioid.indexOf("http://www.foodsafetykorea.go.kr/uploadimg/20230206/20230206054834_1675673314720.jpg"))
 
 
-    /* for(let key in detailPosts) {
+     /* for(let key in detailPosts) {
         if(key.includes("MANUAL")){
-            bbbb([detailPosts])
+           console.log(key)
         }
-    } */
+    }  */
+    
    
     /* const wdlkwdk = Object.entries(detailPosts)
     console.log(detailPosts.RCP_PARTS_DTLS.slice(1,5))
