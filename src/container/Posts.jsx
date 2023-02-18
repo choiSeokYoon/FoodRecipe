@@ -5,6 +5,8 @@ import { foodSearchAtom, recoilLimit,recoilPostsPage } from '../recoil/atom'
 import { fetchPostData } from '../recoil/selector'
 import Paging from '../components/pagination/Paging'
 import SearchForm from '../components/SearchForm'
+import Category from '../components/category/Category'
+import { useState } from 'react'
 
 
 
@@ -18,13 +20,23 @@ export default function Posts() {
     const [limit, setLimit] = useRecoilState(recoilLimit)
     const [postsPage, setPostsPerPage] = useRecoilState(recoilPostsPage)
     const offset = (postsPage - 1) * limit;
+
+    const [category , setCategory] = useState("all");
+    const categories = ["all", ...new Set(posts.map(item => item.RCP_PAT2))]
     
+    /* const filterData = category ==="all"
+    ? posts
+    : posts.filter(item => item.RCP_PAT2 === category) */
     //검색기능
     const filteredFoods = 
     searchKeyword.length===0 
         ? posts 
         : posts.filter((post)=>post.RCP_NM.includes(searchKeyword))
-        
+    const filteredData =
+    category ==="all"
+        ? filteredFoods
+        : filteredFoods.filter(item => item.RCP_PAT2 === category)
+    
         console.log(typeof posts)
         /* const wqosod = posts.map((post, index)=>{
             console.log(post)
@@ -34,9 +46,10 @@ export default function Posts() {
         <div className='post'>
         <div className='container'>
             <div className='title'><h1>레시피</h1></div>
+            <Category categories={categories} setCategory={setCategory}/>
             <SearchForm/>
             <div className='post_list'>
-                {filteredFoods && filteredFoods.slice(offset, offset + limit).map((filteredFood,idx)=>(
+                {filteredData && filteredData.slice(offset, offset + limit).map((filteredFood,idx)=>(
                 <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
                     <div className='img_wrap'>
                         <img src={filteredFood.ATT_FILE_NO_MAIN} alt="" />
