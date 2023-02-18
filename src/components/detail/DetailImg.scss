@@ -1,0 +1,20 @@
+.detail_item_left{
+    display: flex;
+    flex-direction: column;
+    .detail_main_img{
+        
+    }
+    .sub_img{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        img{
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            &.active{
+                border: 1px solid #000;
+            }
+        }
+    }
+}

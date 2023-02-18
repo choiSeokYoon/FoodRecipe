@@ -14,7 +14,7 @@ export default function Paging() {
     const [postsPage, setPostsPage] = useRecoilState(recoilPostsPage)
     const [ totalPosts , setTotalPosts] = useRecoilState(recoilTotalPosts)
     const numPages = Math.ceil(totalPosts / limit); //페이지 숫자
-    const [active, setActive] = useState(false)
+    
     
     return (
         <div className='pagination'>

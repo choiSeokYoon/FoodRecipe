@@ -1,41 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import {recoilDetailData} from '../../recoil/atom'
+import './DetailImg.scss'
 export default function DetailImg() {
-    const [detailPosts,setDetailPosts] = useRecoilState(recoilDetailData)
-    
-    const arrayAllData = Object.entries(detailPosts).map(([key, value]) => ({ [key]: value }));
-    const arrayMANUAL_IMG = arrayAllData.filter((obj) => Object.keys(obj)[0].includes('MANUAL_IMG'));
-    const arrayMANUAL = arrayAllData.filter(
-      (obj) => Object.keys(obj)[0].includes('MANUAL') && !Object.keys(obj)[0].includes('MANUAL_IMG'),
-    );
-    
+  const [detailPosts,setDetailPosts] = useRecoilState(recoilDetailData)
+  const [selectedImageUrl, setSelectedImageUrl] = useState(detailPosts.ATT_FILE_NO_MK);
+  const [active, setActive] = useState(0)
 
-    const askdk = arrayMANUAL.filter((ac) => Object.values(ac)[0].includes("다"))
+
+
+  const detailManualImg = Object.keys(detailPosts)
+  .filter(key => key.includes("MANUAL_IMG") && detailPosts[key] !== "")
+  .map(key => detailPosts[key]).sort()
+  
+  detailManualImg.unshift(detailPosts.ATT_FILE_NO_MK) //메인 이미지도 detailManualImg안에 넣어줌
+
+  const handleClick = (idx) => {
+    setActive(0)
+    setSelectedImageUrl(idx)
     
-    const eeee = arrayMANUAL_IMG.filter((ac) => Object.values(ac)[0].includes("http"))
-    
-    
-    
+  }
+  
+  console.log(selectedImageUrl)
   return (
     <div className="detail_item_left">
       <div className='detail_main_img'>
-        <img src={detailPosts.ATT_FILE_NO_MAIN} alt="" />
-        <div>
-          {Object.keys(askdk).map((sdasddd,idx) => (
-            <div key={idx}>{sdasddd}</div>
-          ))}
-        </div>
-          {/* {sdasd.map((sdasddd)=>{
-            <div>{sdasddd}</div>
-          })} */}
+        <img src={selectedImageUrl} alt="" />
       </div>
-        {/* <ul className='detail_sub_img'>
-        <li><img src={detailPosts.MANUAL_IMG01} alt="" /></li>
-        <li><img src={detailPosts.MANUAL_IMG02} alt="" /></li>
-        <li><img src={detailPosts.MANUAL_IMG03} alt="" /></li>
-        <li><img src={detailPosts.MANUAL_IMG04} alt="" /></li>
-        </ul> */}
+        
+      <div className='sub_img'>
+        {detailManualImg.map((detailManualImgs,idx) => (
+            <img src={detailManualImgs} alt="만드는과정이미지"  
+            className={active === idx ? 'active' : ""}
+            onClick={()=> handleClick(detailManualImgs)}
+          />
+        ))}
+      </div>
     </div>
+    
   )
 }

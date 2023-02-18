@@ -36,3 +36,6 @@ export const recoilTotalPosts = selector({
     key : "recoilTotalPosts",
     get: ({get}) => get(fetchPostData).length
 })
+
+
+
