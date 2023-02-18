@@ -6,10 +6,10 @@ import { recoilDetailData } from '../../recoil/atom'
 export default function DetailInfo() {
     const [detailPosts, setDetailPosts] = useRecoilState(recoilDetailData)
     
-
+     //메뉴얼객체에서 밸류 값들만 꺼냄
     const detailManual = Object.keys(detailPosts)
     .filter(key => key.includes('MANUAL') && !key.includes('MANUAL_IMG') && detailPosts[key] !== '')
-    .map(key => detailPosts[key]).sort()  //메뉴얼객체에서 밸류 값들만 꺼냄
+    .map(key => detailPosts[key]).sort() 
     
 
    

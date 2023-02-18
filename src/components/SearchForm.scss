@@ -2,8 +2,11 @@
     padding: 2rem 0;
     text-align: end;
     input{
-        height: 3rem;
-        width: 30%;
-        font-size: 1.3rem;
+        border: none;
+        border-bottom: 2px solid gray;
+        outline: none;
+        padding: 5px 0;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
 }

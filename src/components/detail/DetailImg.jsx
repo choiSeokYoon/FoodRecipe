@@ -8,7 +8,7 @@ export default function DetailImg() {
   const [active, setActive] = useState(0)
 
 
-
+  //객체로 된 이미지데이터를 반복해서 쓰기위해 밸류값만 따로 빼냄
   const detailManualImg = Object.keys(detailPosts)
   .filter(key => key.includes("MANUAL_IMG") && detailPosts[key] !== "")
   .map(key => detailPosts[key]).sort()

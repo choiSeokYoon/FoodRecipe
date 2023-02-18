@@ -20,27 +20,24 @@ export default function Posts() {
     const [limit, setLimit] = useRecoilState(recoilLimit)
     const [postsPage, setPostsPerPage] = useRecoilState(recoilPostsPage)
     const offset = (postsPage - 1) * limit;
-
+    //카테고리
     const [category , setCategory] = useState("all");
     const categories = ["all", ...new Set(posts.map(item => item.RCP_PAT2))]
     
-    /* const filterData = category ==="all"
-    ? posts
-    : posts.filter(item => item.RCP_PAT2 === category) */
+    
     //검색기능
     const filteredFoods = 
     searchKeyword.length===0 
         ? posts 
         : posts.filter((post)=>post.RCP_NM.includes(searchKeyword))
+    //카테고리
     const filteredData =
     category ==="all"
         ? filteredFoods
         : filteredFoods.filter(item => item.RCP_PAT2 === category)
     
         console.log(typeof posts)
-        /* const wqosod = posts.map((post, index)=>{
-            console.log(post)
-        }) */
+        
   return (
     posts && (
         <div className='post'>

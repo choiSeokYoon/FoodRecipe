@@ -6,14 +6,23 @@
         margin: 0 1rem;
     }
     .pagination_btn{
-        background: paleturquoise;
-        border: none;
-        border-radius: 50%;
-        margin: 0 .2rem;
-        padding: .5rem;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #555;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        
         cursor: pointer;
+        &:hover{
+            background-color: #555;
+            color: #fff;
+        }
         &.active{
-            background: palevioletred;
+            background-color: #333;
+            color: #fff;
         }
     }
     

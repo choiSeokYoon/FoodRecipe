@@ -20,24 +20,28 @@ import { Pagination , Autoplay, Navigation} from "swiper";
 export default function RandomPosts() {
     const [swiperRef, setSwiperRef] = useState(null);
     const [posts, setPosts] = useRecoilState(fetchPostData)
+    const randomPosts =new Set();
     
-    const [qqweqwe, qwesddd] = useState()
     
-
+    while(randomPosts.size < 10) {
+        const randomIndex = Math.floor(Math.random() * posts.length);
+        randomPosts.add(posts[randomIndex])
+    }
+    const bestRecipe= Array.from(randomPosts)
     
-    const randomPosts = []
+    /* const randomPosts = []
     for(let i = 0; i < 10; i++){
         let randomBox = posts[Math.floor(Math.random() * posts.length)]
         randomPosts.push(randomBox)
-    }
+    } */
     
  const dwkjsdks = posts.map((wdkkd ) => (wdkkd.HASH_TAG)) 
  console.log(dwkjsdks)
 
     
-const dietFood = [...posts];
-dietFood.sort((a,b)=> b.INFO_ENG - a.INFO_ENG)
-    console.log(dietFood)
+ const dietFood = [...posts];
+ dietFood.sort((a, b) => a.INFO_ENG - b.INFO_ENG);
+ console.log(dietFood);
 
     
 
@@ -74,15 +78,15 @@ dietFood.sort((a,b)=> b.INFO_ENG - a.INFO_ENG)
                     }} */
                     className="random_slide"
                 >
-                {randomPosts && randomPosts.map((randomPost,idx)=>(
+                {bestRecipe && bestRecipe.map((bestRecipes,idx)=>(
                     <SwiperSlide key={idx} className="slide_list">
-                        <div className='random_img'><img src={randomPost.ATT_FILE_NO_MAIN} alt="음식이미지" /></div>
+                        <div className='random_img'><img src={bestRecipes.ATT_FILE_NO_MAIN} alt="음식이미지" /></div>
                         <div className='random_text'>
                             <p className='random_cate'>
-                                {randomPost.RCP_PAT2}
+                                {bestRecipes.RCP_PAT2}
                             </p>
                             <p className='random_name'>
-                                {randomPost.RCP_NM}
+                                {bestRecipes.RCP_NM}
                             </p>
                         </div>
                         

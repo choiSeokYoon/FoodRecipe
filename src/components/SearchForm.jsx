@@ -12,7 +12,8 @@ export default function SearchForm() {
     <div className='search_form'>
       <input type="search_input"
         value={searchKeyword} 
-        onChange={(e)=>setSearchKeyword(e.target.value)}/>
+        onChange={(e)=>setSearchKeyword(e.target.value)}
+        placeholder="원하는 음식을 입력하세요"/>
     </div>
   )
 }
