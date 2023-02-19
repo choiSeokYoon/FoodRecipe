@@ -23,7 +23,7 @@ export const recoilPageCount = atom({
     default: 0
 })
 
-
+//디테일 api
 export const recoilDetailData = atom({
     key: "recoilDetailData",
     default: null

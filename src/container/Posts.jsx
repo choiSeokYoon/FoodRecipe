@@ -21,8 +21,8 @@ export default function Posts() {
     const [postsPage, setPostsPerPage] = useRecoilState(recoilPostsPage)
     const offset = (postsPage - 1) * limit;
     //카테고리
-    const [category , setCategory] = useState("all");
-    const categories = ["all", ...new Set(posts.map(item => item.RCP_PAT2))]
+    const [category , setCategory] = useState("전체");
+    const categories = ["전체", ...new Set(posts.map(item => item.RCP_PAT2))]
     
     
     //검색기능
@@ -32,7 +32,7 @@ export default function Posts() {
         : posts.filter((post)=>post.RCP_NM.includes(searchKeyword))
     //카테고리
     const filteredData =
-    category ==="all"
+    category ==="전체"
         ? filteredFoods
         : filteredFoods.filter(item => item.RCP_PAT2 === category)
     

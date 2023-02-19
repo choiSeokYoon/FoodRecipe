@@ -18,20 +18,7 @@ export const fetchPostData = selector({
 
 
 
-/* export const fetchDetailData = selectorFamily({
-    key : "RCP_NM=${id}",
-    get: (item) => async({get}) => {
-        try {
-            const response = await axios.get(
-                `https://openapi.foodsafetykorea.go.kr/api/22c0222d1bb745cebfb9/COOKRCP01/json/1/100/${item}`
-                );
-            return response.data.COOKRCP01.row;
-        } catch(err) {
-            console.error(err)
-        }
-    }
-})
- */
+
 export const recoilTotalPosts = selector({
     key : "recoilTotalPosts",
     get: ({get}) => get(fetchPostData).length

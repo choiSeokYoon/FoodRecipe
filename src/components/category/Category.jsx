@@ -5,7 +5,7 @@ import './Category.scss'
 
 export default function Category({categories , setCategory}) {
 
-  const [detailPosts,setDetailPosts] = useRecoilState(fetchPostData)
+  
 
   return (
     <div>
@@ -14,9 +14,6 @@ export default function Category({categories , setCategory}) {
           {categorie}
         </button>
       ))}
-      <ul>
-        
-      </ul>
     </div>
   )
 }

@@ -31,7 +31,7 @@ export default function DetailImg() {
       <div className='sub_img'>
         {detailManualImg.map((detailManualImgs,idx) => (
             <img src={detailManualImgs} alt="만드는과정이미지"  
-            className={active === idx ? 'active' : ""}
+            className={idx === active ? 'active' : ""}
             onClick={()=> handleClick(detailManualImgs)}
           />
         ))}

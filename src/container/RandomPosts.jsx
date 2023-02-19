@@ -22,28 +22,16 @@ export default function RandomPosts() {
     const [posts, setPosts] = useRecoilState(fetchPostData)
     const randomPosts =new Set();
     
-    
+    //
     while(randomPosts.size < 10) {
         const randomIndex = Math.floor(Math.random() * posts.length);
         randomPosts.add(posts[randomIndex])
     }
     const bestRecipe= Array.from(randomPosts)
     
-    /* const randomPosts = []
-    for(let i = 0; i < 10; i++){
-        let randomBox = posts[Math.floor(Math.random() * posts.length)]
-        randomPosts.push(randomBox)
-    } */
-    
- const dwkjsdks = posts.map((wdkkd ) => (wdkkd.HASH_TAG)) 
- console.log(dwkjsdks)
-
-    
  const dietFood = [...posts];
  dietFood.sort((a, b) => a.INFO_ENG - b.INFO_ENG);
  console.log(dietFood);
-
-    
 
   return (
     <div className='randomPosts'>
@@ -56,11 +44,15 @@ export default function RandomPosts() {
                     <h2>RandomRecipe</h2>
                 </div>
                 <Swiper
-                    modules={[Navigation,Autoplay,Pagination]}
+                    modules={[Navigation,Autoplay,Pagination,]}
                     slidesPerView={4}
                     spaceBetween={30}
-                    autoplay={{ delay: 3000 }}
+                    autoplay={{ 
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
                     loop={true}
+                    
                     breakpoints= {{
                         
                         300:{
@@ -103,7 +95,10 @@ export default function RandomPosts() {
                     modules={[Navigation,Autoplay,Pagination]}
                     slidesPerView={4}
                     spaceBetween={30}
-                    autoplay={{ delay: 3000 }}
+                    autoplay={{ 
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
                     loop={true}
                     breakpoints= {{
                         
@@ -117,9 +112,6 @@ export default function RandomPosts() {
                             slidesPerView:4
                         }
                     }} 
-                    /* pagination={{
-                        type: "progressbar"
-                    }} */
                     className="random_slide"
                 >
                         {dietFood && dietFood.map((dietFood,idx)=>(
@@ -138,8 +130,6 @@ export default function RandomPosts() {
                 ))}
                 </Swiper>
             </div>
-            
-           
         </div>
     </div>
   )
