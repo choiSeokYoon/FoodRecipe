@@ -19,10 +19,6 @@ return (
                 <Posts/>
             </section>
         </div>
-        
-        
-            
-        
     </>
   )
 }

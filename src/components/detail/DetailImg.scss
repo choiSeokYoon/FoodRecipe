@@ -5,10 +5,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    /* margin-top: 10rem; */
     .detail_main_img{
         img{
             width: 400px;
             height: 400px;
+            @media screen and (max-width:400px) {
+                width: 300px;
+                height: 300px;
+            }
         }
     }
     .sub_img{

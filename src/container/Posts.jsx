@@ -56,9 +56,7 @@ export default function Posts() {
                     </div>
                 </Link>
                 ))}
-
             </div>
-            
             <Paging/>
         </div>
         

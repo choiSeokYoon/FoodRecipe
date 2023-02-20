@@ -1,12 +1,10 @@
 .detail_post{
     width: 100%;
-    height: 1000px;
     position: relative;
     margin-top: 100px;
-    
+    height: 100%;
     &::before{
         content: "";
-        display: block;
         position: absolute;
         left: 0;
         top: 0;
@@ -14,13 +12,23 @@
         height: 100%;
         background-color: #f6efe1;
         z-index: -1;
+        @media screen and (max-width:1050px) {
+            width: 100%;
+            height: auto;
+        }
     }
     
     .detail_post_box{
         display: flex;
         height: 100%;
         justify-content: space-between;
-        
-        
+        position: relative;
+        @media screen and (max-width:1050px) {
+            flex-direction: column;
+            height: auto
+        }
     }
+}
+@media screen and (max-width:1050px) {
+    .detail_post{width: 100%; height: auto;}
 }

@@ -3,14 +3,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 1rem 3rem;
     box-sizing: border-box;
+    /* margin-top: 10rem; */
     .detail_name{
-        flex-basis: 10%;
+        
         font-size: 2.4rem;
         font-weight: bold;
-        margin-top: 5rem;
-        h2{}
+        margin-bottom: 2rem;
+        h2{} 
     }
     .tab{
         button{
@@ -32,26 +34,32 @@
             }
         }
         .tab_btn{
-          
+            transform: scale(1.2);
         }
     }
     .ingredients{
-        margin-top: 3rem;
+        margin-top: 2rem;
         display: flex;
         align-items: center;
         box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2);
         height: 100px;
         padding: 0.5rem 1.5rem;
         font-size: 1.2rem;
+        @media screen and (max-width:500px) {
+            font-size: 1rem;
+        }
     }
     .detail_cook{
-        margin-top: 5rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         li{
             padding: 1rem 0;
             font-size: 1.5rem;
+            @media screen and (max-width:500px) {
+                font-size: 1rem;
+            }
         }
     }
     .detail_etc{
@@ -61,6 +69,10 @@
             gap: 2rem;
             font-size: 1.4rem;
             font-weight: bold;
+            @media screen and (max-width:650px) {
+                font-size: 1rem;
+                grid-template-columns: repeat(2 , 1fr);
+            }
             li{
 
             }

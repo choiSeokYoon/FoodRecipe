@@ -10,10 +10,7 @@ import DetailInfo from '../components/detail/DetailInfo'
 export default function DetailPost() {
   const [detailPosts,setDetailPosts] = useRecoilState(recoilDetailData)
   const {id} = useParams()
- 
-  
 
- 
   useEffect(()=>{
     const detailData = async ()=>{
       try{
@@ -44,30 +41,3 @@ export default function DetailPost() {
     
   )
 }
-
-const data = [
-  {
-    이름: "메시",
-    종류: "반찬"
-  },
-  {
-    이름: "날두",
-    종류: "반찬"
-  },
-  {
-    이름: "제라드",
-    종류: "반찬"
-  },
-  {
-    이름: "램파드",
-    종류: "반찬"
-  },
-  {
-    이름: "호구",
-    종류: "반찬"
-  },
-  {
-    이름: "흥민",
-    종류: "반찬"
-  },
-]

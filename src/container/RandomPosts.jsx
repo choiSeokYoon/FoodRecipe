@@ -36,7 +36,7 @@ export default function RandomPosts() {
             </div>
             <div className='recipe1'>
                 <div className='recipe1_title'>
-                    <h2>RandomRecipe</h2>
+                    <h2>추천 음식</h2>
                 </div>
                 <Swiper
                     modules={[Navigation,Autoplay,Pagination,]}
@@ -87,7 +87,7 @@ export default function RandomPosts() {
             </div>
             <div className='recipe2'>
                  <div className='recipe1_title'>
-                    <h2>RandomRecipe</h2>
+                    <h2>낮은 열량 음식</h2>
                 </div>
                 <Swiper
                     modules={[Navigation,Autoplay,Pagination]}
@@ -125,8 +125,6 @@ export default function RandomPosts() {
                                 </p>
                             </div>
                         </Link>
-                       
-                        
                     </SwiperSlide>
                 ))}
                 </Swiper>
