@@ -9,6 +9,7 @@ nav,output,ruby,section,summary,time,mark,audio,video {
   font: inherit;
   vertical-align: baseline;
 }
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,
 nav,section {
@@ -16,6 +17,8 @@ nav,section {
 }
 body {
   line-height: 1;
+  font-family: 'Gloock', serif;
+  font-size: 10px;
 }
 ol,
 ul {

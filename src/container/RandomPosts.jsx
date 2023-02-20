@@ -1,24 +1,19 @@
-import React, { useEffect, useState } from 'react'
+
 import { useRecoilState } from 'recoil'
 import {fetchPostData} from '../recoil/selector'
 import './RendomPosts.scss'
-
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-
 import "swiper/css/pagination";
-
-
-
-// import required modules
 import { Pagination , Autoplay, Navigation} from "swiper";
 
 
 
 
+
 export default function RandomPosts() {
-    const [swiperRef, setSwiperRef] = useState(null);
+    
     const [posts, setPosts] = useRecoilState(fetchPostData)
     const randomPosts =new Set();
     
@@ -72,15 +67,18 @@ export default function RandomPosts() {
                 >
                 {bestRecipe && bestRecipe.map((bestRecipes,idx)=>(
                     <SwiperSlide key={idx} className="slide_list">
-                        <div className='random_img'><img src={bestRecipes.ATT_FILE_NO_MAIN} alt="음식이미지" /></div>
-                        <div className='random_text'>
-                            <p className='random_cate'>
-                                {bestRecipes.RCP_PAT2}
-                            </p>
-                            <p className='random_name'>
-                                {bestRecipes.RCP_NM}
-                            </p>
-                        </div>
+                        <Link to={`/detail/${bestRecipes.RCP_NM}`}>
+                            <div className='random_img'><img src={bestRecipes.ATT_FILE_NO_MAIN} alt="음식이미지" /></div>
+                            <div className='random_text'>
+                                <p className='random_cate'>
+                                    {bestRecipes.RCP_PAT2}
+                                </p>
+                                <p className='random_name'>
+                                    {bestRecipes.RCP_NM}
+                                </p>
+                            </div>
+                        </Link>
+                        
                         
                     </SwiperSlide>
                 ))}
@@ -114,17 +112,20 @@ export default function RandomPosts() {
                     }} 
                     className="random_slide"
                 >
-                        {dietFood && dietFood.map((dietFood,idx)=>(
+                {dietFood && dietFood.map((dietFood,idx)=>(
                     <SwiperSlide key={idx} className="slide_list">
-                        <div className='random_img'><img src={dietFood.ATT_FILE_NO_MAIN} alt="음식이미지" /></div>
-                        <div className='random_text'>
-                            <p className='random_cate'>
-                                {dietFood.RCP_PAT2}
-                            </p>
-                            <p className='random_name'>
-                                {dietFood.RCP_NM}
-                            </p>
-                        </div>
+                        <Link to={`/detail/${dietFood.RCP_NM}`}>
+                            <div className='random_img'><img src={dietFood.ATT_FILE_NO_MAIN} alt="음식이미지" /></div>
+                            <div className='random_text'>
+                                <p className='random_cate'>
+                                    {dietFood.RCP_PAT2}
+                                </p>
+                                <p className='random_name'>
+                                    {dietFood.RCP_NM}
+                                </p>
+                            </div>
+                        </Link>
+                       
                         
                     </SwiperSlide>
                 ))}

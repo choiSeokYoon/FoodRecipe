@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className='navbar'>
         
       <div className='logo'>
-        <h2><Link to="/">오늘의 한식레시피</Link></h2>
+        <h2><Link to="/">한식레시피</Link></h2>
       </div>
       {/* <ul className='menu'>
         <li><a href="">전체</a></li>

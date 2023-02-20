@@ -1,0 +1,70 @@
+.detail_item_right{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+    .detail_name{
+        flex-basis: 10%;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-top: 5rem;
+        h2{}
+    }
+    .tab{
+        button{
+            border: none;
+            background-color: #fce205;
+            margin: 0 2rem;
+            width: 100px;
+            height: 40px;
+            color: #444040;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            font-weight: 600;
+            transition: 0.25s;
+            cursor: pointer;
+            &:hover{
+                letter-spacing: 2px;
+                transform: scale(1.2);
+                
+            }
+        }
+        .tab_btn{
+          
+        }
+    }
+    .ingredients{
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2);
+        height: 100px;
+        padding: 0.5rem 1.5rem;
+        font-size: 1.2rem;
+    }
+    .detail_cook{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        li{
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+    }
+    .detail_etc{
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 2rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            li{
+
+            }
+        }
+    }
+
+}

@@ -34,6 +34,7 @@ export default function DetailImg() {
     <div className="detail_item_left">
       <div className="detail_main_img">
         <img src={selectedImageUrl} alt="" />
+        {/* <img src={detailPostsMANUAL_IMG01} alt="" /> */}
       </div>
 
       <div className="sub_img">

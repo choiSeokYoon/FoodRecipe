@@ -1,19 +1,29 @@
 .detail_item_left{
+    
+    flex-basis: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     .detail_main_img{
-        
+        img{
+            width: 400px;
+            height: 400px;
+        }
     }
     .sub_img{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+        gap: 1.2rem;
+        padding: 2rem 0;
+        
         img{
             width: 80px;
             height: 80px;
             cursor: pointer;
+            transition: all 0.2s linear;
             &.active{
-                border: 1px solid #000;
+                transform: scale(1.3);
             }
         }
     }
