@@ -1,5 +1,5 @@
 
-import { useRecoilState } from 'recoil'
+import {  useRecoilValue } from 'recoil'
 import {fetchPostData} from '../recoil/selector'
 import './RendomPosts.scss'
 import { Link } from 'react-router-dom';
@@ -8,25 +8,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import { Pagination , Autoplay, Navigation} from "swiper";
 
-
-
-
-
 export default function RandomPosts() {
-    
-    const [posts, setPosts] = useRecoilState(fetchPostData)
+    const posts = useRecoilValue(fetchPostData)
     const randomPosts =new Set();
-    
     //
     while(randomPosts.size < 10) {
         const randomIndex = Math.floor(Math.random() * posts.length);
         randomPosts.add(posts[randomIndex])
     }
     const bestRecipe= Array.from(randomPosts)
-    
- const dietFood = [...posts];
- dietFood.sort((a, b) => a.INFO_ENG - b.INFO_ENG);
- console.log(dietFood);
+
+    const dietFood = [...posts];
+    dietFood.sort((a, b) => a.INFO_ENG - b.INFO_ENG);
+    console.log(dietFood);
 
   return (
     <div className='randomPosts'>

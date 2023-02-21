@@ -1,5 +1,4 @@
 import './Banner.scss'
-import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,7 +8,6 @@ import bannerImg1 from '../assets/main_1.jpg'
 import bannerImg2 from '../assets/main_2.jpg'
 
 export default function Banner() {
-
   
   return (
     <div className='banner'>

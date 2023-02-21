@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { useRecoilState } from 'recoil'
-import { fetchPostData } from '../../recoil/selector'
 import './Category.scss'
 
 export default function Category({categories , setCategory}) {

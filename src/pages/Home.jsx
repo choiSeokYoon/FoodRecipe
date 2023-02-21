@@ -3,10 +3,7 @@ import Posts from '../container/Posts'
 import Banner from '../container/Banner'
 import RandomPosts from '../container/RandomPosts'
 
-
-
 export default function Home() {
-
 return (
     <>
         <Banner/>

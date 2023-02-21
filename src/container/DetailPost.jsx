@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 import './DetailPost.scss'
 import { useParams } from 'react-router-dom'
@@ -40,6 +40,4 @@ export default function DetailPost() {
         </div>
       </div>
     )
-    
-  
 }

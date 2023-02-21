@@ -1,7 +1,5 @@
 import {atom} from 'recoil'
 
-
-
 //검색기능을 담는 
 export const foodSearchAtom = atom({
     key: "foodSearchAtom",

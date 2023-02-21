@@ -2,9 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 5rem 0;
-    .pagination_btn_prev{
-        margin: 0 1rem;
-    }
+    
     .pagination_btn{
         margin: 0 10px;
         padding: 5px 10px;
@@ -29,9 +27,14 @@
         }
     }
     
-    
+    .pagination_btn_prev{
+        margin: 0 1rem;
+        background: #ddd;
+        cursor: pointer;
+    }
     .pagination_btn_next{
         margin: 0 1rem;
-
+        background: #ddd;
+        cursor: pointer;
     }
 }

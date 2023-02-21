@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 import { recoilDetailData } from '../../recoil/atom'
 import './DetailImg.scss'
 
 export default function DetailImg() {
-  const [detailPosts, setDetailPosts] = useRecoilState(recoilDetailData)
+  const detailPosts = useRecoilValue(recoilDetailData)
   const [selectedImageUrl, setSelectedImageUrl] = useState(detailPosts.ATT_FILE_NO_MK)
   const [active, setActive] = useState(0)
 
@@ -33,8 +33,7 @@ export default function DetailImg() {
   return (
     <div className="detail_item_left">
       <div className="detail_main_img">
-        <img src={selectedImageUrl} alt="" />
-        {/* <img src={detailPostsMANUAL_IMG01} alt="" /> */}
+        <img src={selectedImageUrl} alt="이미지" />
       </div>
 
       <div className="sub_img">
@@ -51,4 +50,3 @@ export default function DetailImg() {
     </div>
   )
 }
-/* sadczxczx */

@@ -1,21 +1,18 @@
 
 import { useState } from 'react'
-import { useRecoilState } from 'recoil'
+import {  useRecoilValue } from 'recoil'
 import { recoilDetailData } from '../../recoil/atom'
 import './DetailInfo.scss'
 
 
 export default function DetailInfo() {
-    const [detailPosts, setDetailPosts] = useRecoilState(recoilDetailData)
+    const detailPosts = useRecoilValue(recoilDetailData)
     const [teb , setTeb] = useState(1) 
      //메뉴얼객체에서 밸류 값들만 꺼냄
     const detailManual = Object.keys(detailPosts)
     .filter(key => key.includes('MANUAL') && !key.includes('MANUAL_IMG') && detailPosts[key] !== '')
     .map(key => detailPosts[key]).sort() 
     
-
-   
-   
   return (
     <div className="detail_item_right">
         <div className='detail_name'>
@@ -35,7 +32,6 @@ export default function DetailInfo() {
                 <li key={idx}>{filteredArrs}</li>
             ))}
         </ul>
-         
         <div className='detail_etc'>
         {teb === 2 && 
             <ul>
@@ -47,8 +43,6 @@ export default function DetailInfo() {
             </ul>
             }
         </div>
-        
-        
     </div>
   )
 }

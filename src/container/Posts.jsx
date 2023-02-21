@@ -1,29 +1,25 @@
 import './Posts.scss'
 import { Link } from 'react-router-dom'
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 import { foodSearchAtom, recoilLimit,recoilPostsPage } from '../recoil/atom'
 import { fetchPostData } from '../recoil/selector'
 import Paging from '../components/pagination/Paging'
-import SearchForm from '../components/SearchForm'
+import SearchForm from '../components/searchForm/SearchForm'
 import Category from '../components/category/Category'
 import { useState } from 'react'
 
-
-
-
 export default function Posts() {
     //데이터
-    const [posts,setPosts] =useRecoilState(fetchPostData)
+    const posts = useRecoilValue(fetchPostData)
     //검색
-    const [searchKeyword, setSearchKeyword] = useRecoilState(foodSearchAtom)
+    const searchKeyword= useRecoilValue(foodSearchAtom)
     //페이지네이션 
-    const [limit, setLimit] = useRecoilState(recoilLimit)
-    const [postsPage, setPostsPerPage] = useRecoilState(recoilPostsPage)
+    const limit = useRecoilValue(recoilLimit)
+    const postsPage= useRecoilValue(recoilPostsPage)
     const offset = (postsPage - 1) * limit;
     //카테고리
     const [category , setCategory] = useState("전체");
     const categories = ["전체", ...new Set(posts.map(item => item.RCP_PAT2))]
-    
     
     //검색기능
     const filteredFoods = 
@@ -35,7 +31,6 @@ export default function Posts() {
     category ==="전체"
         ? filteredFoods
         : filteredFoods.filter(item => item.RCP_PAT2 === category)
-    
         console.log(typeof posts)
         
   return (
@@ -59,9 +54,6 @@ export default function Posts() {
             </div>
             <Paging/>
         </div>
-        
-       
-      
     </div>
     )
    

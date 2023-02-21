@@ -7,9 +7,7 @@ import React, {Suspense} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './app.css'
 
-
-function App() {
-  
+function App() { 
   return (
     <>
       <Header/>
