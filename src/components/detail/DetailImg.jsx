@@ -51,3 +51,4 @@ export default function DetailImg() {
     </div>
   )
 }
+/* sadczxczx */
