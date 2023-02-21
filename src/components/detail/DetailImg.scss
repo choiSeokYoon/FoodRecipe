@@ -6,8 +6,12 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    @media screen and (max-width:800px) {
+        margin-top: 2rem 0;
+    }
     /* margin-top: 10rem; */
     .detail_main_img{
+        
         img{
             width: 400px;
             height: 400px;
@@ -22,7 +26,9 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 1.2rem;
         padding: 2rem 0;
-        
+        @media screen and (max-width:800px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
         img{
             width: 80px;
             height: 80px;
@@ -31,6 +37,11 @@
             &.active{
                 transform: scale(1.3);
             }
+            
+            
+            
         }
+       
+    
     }
 }
