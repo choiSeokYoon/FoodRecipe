@@ -6,6 +6,7 @@ import { useRecoilState } from 'recoil'
 import {recoilDetailData} from '../recoil/atom'
 import DetailImg from '../components/detail/DetailImg'
 import DetailInfo from '../components/detail/DetailInfo'
+import Loading from '../components/loader/Loading'
  
 export default function DetailPost() {
   const [detailPosts,setDetailPosts] = useRecoilState(recoilDetailData)
@@ -26,18 +27,19 @@ export default function DetailPost() {
   }, [id])
 
   return (
-    detailPosts && (
-      
       <div className='detail_post'>
-       
         <div className='container'>
-          <div className='detail_post_box'>
-            <DetailImg/>
-            <DetailInfo/>
-          </div>
+          {detailPosts === undefined 
+          ? <Loading/> : detailPosts ===null 
+          ? <div className='null'>404</div>: (
+            <div className='detail_post_box'>
+              <DetailImg/>
+              <DetailInfo/>
+            </div>
+          )}
         </div>
       </div>
     )
     
-  )
+  
 }
