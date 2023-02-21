@@ -1,6 +1,5 @@
 import './Home.scss'
 import Posts from '../container/Posts'
-import SearchForm from '../components/SearchForm'
 import Banner from '../container/Banner'
 import RandomPosts from '../container/RandomPosts'
 
