@@ -13,7 +13,7 @@ function App() {
       <Header/>
       <Suspense fallback={<Loading/>}>
         <Routes>
-          <Route path='/FoodRecipe' element={<Home/>}/>
+          <Route path='/' element={<Home/>}/>
           <Route path='/detail/:id' element={<Detail/>}/>
           <Route/>
         </Routes>
