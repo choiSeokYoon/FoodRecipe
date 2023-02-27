@@ -1,0 +1,65 @@
+.ranking_posts{
+    .title{
+        font-size: 3rem;
+        padding: 5rem 0;
+        text-align: center;
+    }
+    .ranking_box{
+        display: flex;
+        width: 100%;
+        .ranking_table{
+            flex: 70%;
+            
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+            .ranking_list{
+                border-bottom: 2px solid #ddd;
+                border-top: 2px solid #ddd;
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+                padding: 1rem 0;
+                justify-content: center;
+                &:nth-child(1){
+                    border-top: none
+                }
+                .num{
+                    flex: 10%;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+                .ranking_img{
+                    flex: 10%;
+                    img{
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .ranking_title{
+                    flex: 32%;
+                    margin-left: 3rem;
+                    font-size: 1rem;
+                }
+                .ranking_nutriment{
+                    flex: 16%;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+                .food_tag{
+                    flex: 16%;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+                .food_type{
+                    flex: 16%;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .ranking_category{
+            flex: 20%;
+        }
+    }
+}

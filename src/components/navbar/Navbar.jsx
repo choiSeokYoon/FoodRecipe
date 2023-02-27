@@ -12,7 +12,7 @@ export default function Navbar() {
         <h2><Link to="/">한식레시피</Link></h2>
       </div>
       <ul className='nav_mdl'>
-        <li><Link to="/order">랭킹보기</Link> </li>
+        <li><Link to="/ranking">랭킹보기</Link> </li>
         <li><Link to="/posts">레시피</Link> </li>
       </ul>
       <ul className='nav_end'>
