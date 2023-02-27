@@ -1,5 +1,5 @@
 import './Home.scss'
-import Posts from '../container/Posts'
+import Posts from './Posts'
 import Banner from '../container/Banner'
 import RandomPosts from '../container/RandomPosts'
 
