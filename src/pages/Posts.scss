@@ -28,7 +28,7 @@
         }
         .post_item{
             position: relative;
-            color: #ddd;
+            color: #fff;
             .img_wrap{
                 position: relative;
                 width: 100%;
@@ -39,19 +39,32 @@
                     bottom: 0;
                     width: 100%;
                     background-size: cover;
+                    &:hover{
+                        
+                        filter: brightness(0.5);
+                    }
                 }
             }
             .post_text{
                 position: absolute;
-                bottom: 0;
-                width: 100%;
-                background: url(../assets/main_prod_bg.png) repeat;
-                .post_title{
-                    color: #fff;
-                    white-space: wrap;
-                    text-overflow: ellipsis;
-                    font-size: 1.4rem;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                opacity: 0;
+                transition: .5s;
+                font-size: 1.2rem;
+                font-weight: bold;
+                &:hover{
+                    color: #000;
                 }
+
+            }
+            &:hover .post_text{
+                
+                opacity: 1;
+                
+                
             }
         }
     }

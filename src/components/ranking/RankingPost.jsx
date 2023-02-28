@@ -18,13 +18,13 @@ export default function RankingPost() {
       </div>
         <div className='ranking_box'>
           <ul className='ranking_table'>
-            {dietFood.map((item)=>(
+            {dietFood.map((item, idx)=>(
               <li className='ranking_list'key={item.id}>
-                <p className='num'>1</p>
+                <p className='num'>{idx+1}</p>
                 <div className='ranking_img'>
                   <img src={item.ATT_FILE_NO_MAIN} alt="" />
                 </div>
-                <div className='ranking_title'>{item.RCP_NM}아저씨안녕하세요</div>
+                <div className='ranking_title'>{item.RCP_NM}</div>
                 <div className='ranking_nutriment'>{item.INFO_ENG}</div>
                 <div className='food_type'>{item.RCP_PAT2}</div>
                 <div className='food_tag'>{item.HASH_TAG}</div>
