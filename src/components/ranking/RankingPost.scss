@@ -13,24 +13,38 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 100px;
-            .ranking_list{
-                border-bottom: 2px solid #ddd;
+            .ranking_table_top{
+                background: #ddd;
+                border-radius: 20px;
+                .ranking_img{
+                    font-size: 1rem;
+                }
+                .ranking_title{
+                    text-align: center;
+                }
+            }
+            li{
                 border-top: 2px solid #ddd;
                 display: flex;
                 align-items: center;
-                margin-bottom: 2rem;
+                
                 padding: 1rem 0;
                 justify-content: center;
                 &:nth-child(1){
+                    border-top: none
+                }
+                &:nth-child(2){
                     border-top: none
                 }
                 .num{
                     flex: 10%;
                     text-align: center;
                     font-size: 1rem;
+                    
                 }
                 .ranking_img{
                     flex: 10%;
+                    text-align: center;
                     img{
                         width: 100px;
                         height: 100px;
