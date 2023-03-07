@@ -5,12 +5,11 @@ import './Paging.scss'
 import { GrFormPrevious } from 'react-icons/gr'
 import { GrFormNext } from 'react-icons/gr'
 
-export default function Paging() {
-    
+export default function Paging({ filteredData}) {
+    const RecipePost = filteredData.length
     const limit = useRecoilValue(recoilLimit)
     const [postsPage, setPostsPage] = useRecoilState(recoilPostsPage)
-    const totalPosts = useRecoilValue(recoilTotalPosts)
-    const numPages = Math.ceil(totalPosts / limit); //페이지 숫자
+    const numPages = Math.ceil(RecipePost / limit); //페이지 숫자
     
     return (
         <div className='pagination'>

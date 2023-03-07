@@ -52,7 +52,7 @@ export default function Posts() {
                 </Link>
                 ))}
             </div>
-            <Paging/>
+            <Paging filteredData={filteredData}/>
         </div>
     </div>
     )
