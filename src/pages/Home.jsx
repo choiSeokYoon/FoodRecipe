@@ -11,9 +11,7 @@ return (
             <section className='section_1'>
                 <RandomPosts/>
             </section>
-            <section className='section_2'>
-                <Posts/>
-            </section>
+            
         </div>
     </>
   )

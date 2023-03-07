@@ -16,7 +16,7 @@ export default function Navbar() {
         <li><Link to="/posts">레시피</Link> </li>
       </ul>
       <ul className='nav_end'>
-        <li><BiSearchAlt/> </li>
+        <li><Link to="/posts"><BiSearchAlt/></Link> </li>
         <li><a href=""></a> <SiKakaotalk/></li>
         <li><a href="https://github.com/choiSeokYoon"><AiFillGithub/></a></li>
       </ul>
