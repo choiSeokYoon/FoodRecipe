@@ -15,7 +15,6 @@ export default function Banner() {
   
   return (
     <div className='banner'>
-      
         <div className='slide'>
           <Swiper
             modules={[Navigation, Pagination, Autoplay, EffectFade]}

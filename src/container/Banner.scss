@@ -6,11 +6,11 @@
         height: 100%;
         position: relative;
         @media screen and (max-width:1200px) {
-            flex-direction: column;
+            /* flex-direction: column;
             .slide_box img {
                 max-width: 100%;
                 height: auto;
-              }
+              } */
         }
         .slide_box {
             flex: 50%;
