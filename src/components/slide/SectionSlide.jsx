@@ -21,17 +21,17 @@ import { Link } from 'react-router-dom';
 
 export default function RandomPosts() {
     const posts = useRecoilValue(fetchPostData)
-    const randomPosts =new Set();
-    //
-    
-    while(randomPosts.size < 20) {
-        const randomIndex = Math.floor(Math.random() * posts.length);
-        randomPosts.add(posts[randomIndex])
+    //set으로 중복없앰
+    const recipe = new Set();
+
+    for (let i = 0; i < 20; i++) {
+      const randomIndex = Math.floor(Math.random() * posts.length);
+      recipe.add(posts[randomIndex]);
     }
-    
-    
-    const bestRecipe= Array.from(randomPosts)
-    console.log(bestRecipe)
+  
+    //배열로 반환하고 변수에 담음
+    const randomRecipe = Array.from(recipe);
+    console.log(randomRecipe);
 
 
   return (
@@ -58,8 +58,8 @@ export default function RandomPosts() {
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="slide_box"
       >
-        {bestRecipe.map((item)=>(
-            <SwiperSlide>
+        {randomRecipe.map((item, idx)=>(
+            <SwiperSlide key={idx}>
               <Link to={`/detail/${item.RCP_NM}`}>
                 <img src={item.ATT_FILE_NO_MAIN}/>
               </Link>
