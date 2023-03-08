@@ -56,7 +56,8 @@ export default function DetailInfo() {
                     className={teb === 2 ? "tab_btn": ""}>ETC</button>
             </div>
             <div className='ingredients'>
-              <p>{detailPosts.RCP_PARTS_DTLS}</p>  
+              <p>{detailPosts.RCP_PARTS_DTLS}</p>
+               
             </div>
             <ul className='detail_cook'>
                 {teb === 1 && detailManual.map((filteredArrs , idx)=>(
@@ -68,6 +69,7 @@ export default function DetailInfo() {
                     <canvas className='myChart'></canvas>
                 }
             </div>
+            
         </div>
     )
 }
