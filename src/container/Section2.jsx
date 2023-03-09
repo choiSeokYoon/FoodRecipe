@@ -44,6 +44,10 @@ export default function Section2() {
                   disableOnInteraction: false,
                 }}
                 loop={true}
+                navigation={{
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                }}
                 pagination={{
                   type: "fraction",
                   clickable: true,
@@ -83,6 +87,12 @@ export default function Section2() {
                       </div>
                     </SwiperSlide>
                   ))}
+                <div className="swiper-button-next">
+                  <div>wdwdwdwdwdwdwd</div>
+                </div>
+                <div className="swiper-button-prev">
+                  <div>wdqwdwqdw</div>
+                </div>
                 </Swiper>
               </div>
                 

@@ -8,6 +8,9 @@ import { Routes, Route } from 'react-router-dom';
 import './app.css'
 import Posts from './pages/Posts';
 import Ranking from './pages/Ranking';
+import Register from './pages/Register';
+import Login from './pages/Login';
+
 
 function App() { 
   return (
@@ -19,6 +22,8 @@ function App() {
           <Route path='/detail/:id' element={<Detail/>}/>
           <Route path='/posts' element={<Posts/>}/>
           <Route path='/ranking' element={<Ranking/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
         </Routes>
       </Suspense>
       <Footer/>
