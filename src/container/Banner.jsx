@@ -35,15 +35,9 @@ export default function Banner() {
           >
             <SwiperSlide className='swiperSlide'>
               <img src={bannerImg6} alt="" />
-              <div className="slide_text">
-                <p>한끼에 담은 오늘의 </p>
-              </div>
             </SwiperSlide>
             <SwiperSlide className='swiperSlide'>
               <img src={bannerImg7} alt="" />
-              <div className="slide_text" >
-                <p>가장 풍요롭고 생생한 시간</p>
-              </div>
             </SwiperSlide>
             <div className='swiper_pagination'></div>
           </Swiper>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+
 import { useRecoilValue } from 'recoil';
 import { fetchPostData } from '../../recoil/selector';
 import './RankingPost.scss';
@@ -14,11 +14,10 @@ export default function RankingPost() {
       <div className="ranking_posts">
         <div className="container">
           <div className="title">
-            <h1>랭킹모음</h1>
+            <h1>저칼로리</h1>
           </div>
         </div>
         <div className="ranking_box">
-          
           <ul className="ranking_table">
             <li className='ranking_table_top'>
               <p className='num'>num</p>

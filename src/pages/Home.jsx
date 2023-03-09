@@ -9,7 +9,6 @@ return (
     <>
         <Banner/>
         <div className='main_contents'>
-
             <Section1/>
             <Section2/>
         </div>

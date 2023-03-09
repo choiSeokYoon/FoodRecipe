@@ -63,7 +63,6 @@ export default function RandomPosts() {
               <Link to={`/detail/${item.RCP_NM}`}>
                 <img src={item.ATT_FILE_NO_MAIN}/>
               </Link>
-                
             </SwiperSlide>
         ))}
       </Swiper>
