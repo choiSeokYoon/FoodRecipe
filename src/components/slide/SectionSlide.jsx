@@ -59,14 +59,18 @@ export default function RandomPosts() {
         className="slide_box"
       >
         {randomRecipe.map((item, idx)=>(
+          <>
             <SwiperSlide key={idx}>
               <Link to={`/detail/${item.RCP_NM}`}>
                 <img src={item.ATT_FILE_NO_MAIN}/>
               </Link>
             </SwiperSlide>
+          </>
         ))}
       </Swiper>
-        </div>
     </div>
+    <p>오늘의 추천레시피 {randomRecipe.length}개 오늘은 집에서 만들어 드시는건 어떨까요? </p>
+  </div>
+  
   )
 }

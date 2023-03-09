@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Section2.scss'
+import './Section3.scss'
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { fetchPostData } from './../recoil/selector';
 import { Link } from 'react-router-dom';
@@ -26,11 +26,9 @@ export default function Section2() {
     })
     const simpleRecipe = postsSort.slice(0,8)
   return (
-    <div className='section2'>
+    <div className='section3'>
         <div className='container'>
-            <div className='title'>
-                <h1>간편 레시피</h1>
-            </div>
+            
             <div className='simple_recipe'>
               <div className='simple_left'>
               <Swiper

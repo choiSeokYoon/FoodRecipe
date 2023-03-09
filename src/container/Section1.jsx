@@ -9,6 +9,7 @@ export default function Section1() {
             <h1>추천 레시피</h1>
         </div>
         <SectionSlide/>
+        
     </div>
   )
 }

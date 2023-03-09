@@ -18,26 +18,23 @@
         display: flex;
         justify-content: space-between;
         button{
-            
-            border: none;
-            background-color: #fce205;
             margin: 0 2rem;
             width: 100px;
             height: 40px;
             color: #444040;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            border: none;
+            border-radius: 10px;
             font-weight: 600;
             transition: 0.25s;
             cursor: pointer;
             &:hover{
-                letter-spacing: 2px;
-                transform: scale(1.2);
+                
                 
             }
         }
         .tab_btn{
-            transform: scale(1.2);
+            border: 2px solid #000;
         }
     }
     .ingredients{

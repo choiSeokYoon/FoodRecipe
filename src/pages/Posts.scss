@@ -35,10 +35,12 @@
                 
                 overflow: hidden;
                 img{
-                    height: 100%;
-                    bottom: 0;
                     width: 100%;
-                    background-size: cover;
+            
+                    height: 300px;
+                    filter: brightness(100%);
+                    transition: filter 0.3s ease-in-out;
+            cursor: pointer;
                     &:hover{
                         
                         filter: brightness(0.5);
@@ -50,21 +52,22 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                color: #fff;
-                opacity: 0;
-                transition: .5s;
+                opacity: 0; 
                 font-size: 1.2rem;
-                font-weight: bold;
-                &:hover{
-                    color: #000;
+                transition: opacity 0.3s ease-in-out;
+                color: #fff;
+                cursor: pointer;
+                &:hover ~ img{
+                    filter: brightness(100%); 
                 }
 
             }
             &:hover .post_text{
                 
-                opacity: 1;
-                
-                
+                opacity: 1;               
+            }
+            &:hover img {
+                filter: brightness(30%);
             }
         }
     }

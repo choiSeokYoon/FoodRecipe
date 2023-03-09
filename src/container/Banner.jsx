@@ -24,13 +24,11 @@ export default function Banner() {
             pagination={{
               clickable: true,
               el:".swiper_pagination"
-              
             }}
             autoplay={{ 
-              delay: 3000,
+              delay: 2000,
               disableOnInteraction: false,
             }}
-            navigation={true}
             className="slide_box"
           >
             <SwiperSlide className='swiperSlide'>
