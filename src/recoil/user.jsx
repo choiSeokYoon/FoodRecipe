@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const recoUluserList = atom({
+export const recoilUserList = atom({
   key: "userListState",
   default: [],
 });
@@ -8,5 +8,5 @@ export const recoUluserList = atom({
 
 export const recoilAuthUser = atom({
   key: 'authUser',
-  default: null,
+  default: true,
 });

@@ -27,5 +27,10 @@ export const recoilDetailData = atom({
     default: undefined
 })
 
+export const recoilUserCart = atom({
+    key: "recoilCart",
+    default:[]
+})
+
 
 

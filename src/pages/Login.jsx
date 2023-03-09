@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { recoilAuthUser } from '../recoil/user';
 
@@ -34,22 +34,27 @@ export default function Login() {
     navigate('/');
   };
 
-  return (
-    <form onSubmit={handleLogin}>
-      <input
-        type="email"
-        placeholder="이메일"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="비밀번호"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button type="submit">로그인</button>
-      {error && <p>{error}</p>}
-    </form>
+    return (
+    <div className='login'>
+        <form onSubmit={handleLogin}>
+            <input
+                type="email"
+                placeholder="이메일"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+                type="password"
+                placeholder="비밀번호"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">로그인</button>
+            {error && <p>{error}</p>}
+        </form>
+            <button><Link to="/register">회원가입</Link></button>
+    </div>
+    
+      
   );
 };

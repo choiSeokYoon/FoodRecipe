@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useResetRecoilState } from 'recoil';
-import { recoUluserList } from '../recoil/user';
+import { recoilUserList } from '../recoil/user';
 
 export default function Register() {
     const [email, setEmail] = useState("");
@@ -11,7 +11,7 @@ export default function Register() {
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
     
-    const setUserList = useResetRecoilState(recoUluserList);
+    const setUserList = useResetRecoilState(recoilUserList);
     const handleSignup = (e) => {
         e.preventDefault();
         setError(null);
@@ -41,35 +41,39 @@ export default function Register() {
     };
     
     
-  return (
-    <form onSubmit={handleSignup}>
-      <input
-        type="email"
-        placeholder="이메일"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="비밀번호"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="이름"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-    {error &&
-        <div>{error}</div>
-    }
-    {
-        success &&
-        <div>회원가입이 완료되었습니다!</div>
-    }
-      <button type="submit">회원가입</button>
-    </form>
+    return (
+      <div className='register'>
+        <form onSubmit={handleSignup}>
+            <input
+                type="email"
+                placeholder="이메일"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+                type="password"
+                placeholder="비밀번호"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <input
+                type="text"
+                placeholder="이름"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
+            {error &&
+                <div>{error}</div>
+            }
+            {
+                success &&
+                <div>회원가입이 완료되었습니다!</div>
+            }
+            <button type="submit">회원가입</button>
+            <button><Link to="/login">로그인</Link></button>
+            </form>
+            
+      </div>
+    
   );
 };
-
