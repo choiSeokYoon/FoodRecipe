@@ -5,13 +5,11 @@
         font-size: 3rem;
         padding: 5rem 0;
         text-align: center;
-        
     }
     
     .post_list{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        
         gap: 1rem;
         
         @media screen and (max-width:1000px) {
