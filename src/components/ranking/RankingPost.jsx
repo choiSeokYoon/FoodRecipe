@@ -20,7 +20,7 @@ export default function RankingPost() {
         <div className="ranking_box">
           <ul className="ranking_table">
             <li className='ranking_table_top'>
-              <p className='num'>num</p>
+              <p className='num'>No.</p>
               <p className="ranking_img">이미지</p>
               <p className="ranking_title">음식 레시피</p>
               <p className="food_type">칼로리</p>

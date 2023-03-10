@@ -15,35 +15,15 @@ export default function Banner() {
   
   return (
     <div className='banner'>
-        <div className='slide'>
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay, EffectFade]}
-            slidesPerView={1}
-            spaceBetween={30}
-            loop={true}
-            pagination={{
-              clickable: true,
-              el:".swiper_pagination"
-            }}
-            autoplay={{ 
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            className="slide_box"
-          >
-            <SwiperSlide className='swiperSlide'>
-              <img src={bannerImg6} alt="" />
-            </SwiperSlide>
-            <SwiperSlide className='swiperSlide'>
-              <img src={bannerImg7} alt="" />
-            </SwiperSlide>
-            <div className='swiper_pagination'></div>
-          </Swiper>
+        <div className='banner_img'>
+          <div className="banner_left">
+            <img src={bannerImg6} alt="베너 이미지" />
+          </div>
           <div className='baneer_right'>
-            <img src={bannerImg3} alt="" />
-            <img src={bannerImg4} alt="" />
-            <img src={bannerImg5} alt="" />
-            <img src={bannerImg8} alt="" />
+            <img src={bannerImg3} alt="베너 이미지" />
+            <img src={bannerImg4} alt="베너 이미지" />
+            <img src={bannerImg5} alt="베너 이미지" />
+            <img src={bannerImg8} alt="베너 이미지" />
           </div>
         </div>
     </div>

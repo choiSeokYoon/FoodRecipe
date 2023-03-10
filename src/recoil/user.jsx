@@ -8,5 +8,5 @@ export const recoilUserList = atom({
 
 export const recoilAuthUser = atom({
   key: 'authUser',
-  default: true,
+  default: null,
 });

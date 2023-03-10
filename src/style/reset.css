@@ -9,6 +9,7 @@ nav,output,ruby,section,summary,time,mark,audio,video {
   font: inherit;
   vertical-align: baseline;
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,
@@ -16,10 +17,10 @@ nav,section {
   display: block;
 }
 body {
+  font-family: 'Noto Sans KR', sans-serif;
   color: #242424 ;
   line-height: 1;
-  font-family: 'Gloock', serif;
-  font-family: 'Lobster', cursive;
+  
   font-size: 10px;
 }
 ol,

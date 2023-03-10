@@ -11,7 +11,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.2rem;
-        
+
         @media screen and (max-width:1000px) {
             grid-template-columns: repeat(3, 1fr);
             padding: 0 2rem;
