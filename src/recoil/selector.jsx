@@ -11,6 +11,7 @@ export const fetchPostData = selector({
             return response.data.COOKRCP01.row;
         } catch (err) {
             console.error(err)
+            return []
         }
     }
 })

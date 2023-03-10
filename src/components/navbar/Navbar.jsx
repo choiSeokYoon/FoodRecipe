@@ -20,6 +20,7 @@ export default function Navbar() {
       <ul className='nav_mdl'>
         <li><Link to="/ranking">다이어트</Link> </li>
         <li><Link to="/posts">레시피</Link> </li>
+        <li><Link to="/like">찜목록</Link> </li>
       </ul>
       {authUser ? (
         <ul className='nav_end'>

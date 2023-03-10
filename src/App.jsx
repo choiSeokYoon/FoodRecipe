@@ -10,6 +10,7 @@ import Posts from './pages/Posts';
 import Ranking from './pages/Ranking';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import WishList from './pages/WishList';
 
 
 function App() { 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/ranking' element={<Ranking/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/like' element={<WishList/>}/>
         </Routes>
       </Suspense>
       <Footer/>

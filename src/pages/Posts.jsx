@@ -1,11 +1,12 @@
 import './Posts.scss'
 import { Link } from 'react-router-dom'
-import { useRecoilValue } from 'recoil'
+import {  useRecoilValue } from 'recoil'
 import { foodSearchAtom, recoilLimit,recoilPostsPage } from '../recoil/atom'
 import { fetchPostData } from '../recoil/selector'
 import Paging from '../components/pagination/Paging'
 import SearchForm from '../components/searchForm/SearchForm'
 import Category from '../components/category/Category'
+import UserLike from '../components/Like/UserLike'
 import { useState } from 'react'
 
 export default function Posts() {
@@ -13,6 +14,9 @@ export default function Posts() {
     const posts = useRecoilValue(fetchPostData)
     //검색
     const searchKeyword= useRecoilValue(foodSearchAtom)
+
+    
+    
     //페이지네이션 
     const limit = useRecoilValue(recoilLimit)
     const postsPage= useRecoilValue(recoilPostsPage)
@@ -32,6 +36,7 @@ export default function Posts() {
         ? filteredFoods
         : filteredFoods.filter(item => item.RCP_PAT2 === category)
         console.log(typeof posts)
+    
         
   return (
     posts && (
@@ -42,14 +47,18 @@ export default function Posts() {
             <SearchForm/>
             <div className='post_list'>
                 {filteredData && filteredData.slice(offset, offset + limit).map((filteredFood,idx)=>(
-                <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
+                <div>
+                    <Link key={idx} to={`/detail/${filteredFood.RCP_NM}`} className="post_item">
                     <div className='img_wrap'>
                         <img src={filteredFood.ATT_FILE_NO_MAIN} alt="" />
                     </div>
                     <div className='post_text'>
                         <p className='post_title'>{filteredFood.RCP_NM}</p>
+                        
                     </div>
-                </Link>
+                    </Link>
+                    <UserLike food={filteredFood} />
+                </div>
                 ))}
             </div>
             <Paging filteredData={filteredData}/>

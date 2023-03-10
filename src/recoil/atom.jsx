@@ -28,7 +28,7 @@ export const recoilDetailData = atom({
 })
 
 export const recoilUserCart = atom({
-    key: "recoilCart",
+    key: "recoilUserCart",
     default:[]
 })
 
