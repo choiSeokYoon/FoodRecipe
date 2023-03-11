@@ -23,7 +23,7 @@ export default function RankingPost() {
             <li className='ranking_table_top'>
               <p className='num'>No.</p>
               <p className="ranking_img">이미지</p>
-              <p className="ranking_title">음식 레시피</p>
+              <p className="ranking_title">이름</p>
               <p className="food_type">칼로리</p>
               <p className="food_type">카테고리</p>
               <p className="food_tag">태그</p>

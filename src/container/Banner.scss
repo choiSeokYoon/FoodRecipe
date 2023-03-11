@@ -3,6 +3,9 @@
     background: #f8f7e5;
     .banner_img{
         display: flex;
+        @media screen and (max-width:800px) {
+        flex-direction: column;
+    }
         .banner_left{
             flex: 50%;
             img{

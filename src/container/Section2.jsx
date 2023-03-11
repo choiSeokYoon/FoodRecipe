@@ -65,7 +65,7 @@ export default function Section2() {
               <div className='simple_right'>
                 <div className='simple_info'>
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                  <p>데이터에서 재료가 가장 짧은 순서대로 8개를 뽑아 배치했습니다.</p> 
                 </div>
                 <div className='simple_slide'>
                   <Swiper

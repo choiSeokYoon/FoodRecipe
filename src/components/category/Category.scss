@@ -16,6 +16,9 @@
         transition: .5s;
         font-size: 1rem;
         border-radius: 20px;
+        @media screen and (max-width:800px){
+             font-size: .7rem;
+        }
         &:hover{
             background: #ddd;
         }

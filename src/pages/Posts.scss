@@ -5,6 +5,9 @@
         font-size: 3rem;
         padding: 5rem 0;
         text-align: center;
+        @media screen and (max-width:800px){
+            padding: 1.8rem 0;
+        }
     }
     
     .post_list{
@@ -20,7 +23,7 @@
             grid-template-columns: repeat(2, 1fr);
             padding: 0 1rem;
         }
-        @media screen and (max-width:450px) {
+        @media screen and (max-width:600px) {
             grid-template-columns: repeat(1, 1fr);
             padding: 0 1rem;
         }
@@ -38,6 +41,9 @@
                     height: 300px;
                     filter: brightness(100%);
                     transition: filter 0.3s ease-in-out;
+                    @media screen and (max-width:800px){
+             height: 180px;
+        }
             cursor: pointer;
                     &:hover{
                         

@@ -5,17 +5,25 @@
         font-size: 3rem;
         padding: 5rem 0;
         text-align: center;
+        @media screen and (max-width:800px){
+            padding: 1.8rem 0;
+        }
     }
   
     .simple_recipe{
         display: flex;
         height: 500px;
-        
+        @media screen and (max-width:800px) {
+            flex-direction: column;
+            height: auto;
+        }
         .simple_left{
             width: 40%;
             height: 100%;
             padding-right: 1rem;
-            
+            @media screen and (max-width:800px) {
+            width: 100%;
+            }
             .mySwiper2 {
                 
                 .swiper-slide{
@@ -33,17 +41,33 @@
             flex-direction: column;
             justify-content: space-between;
             position: relative;
-            
+            @media screen and (max-width:800px) {
+            width: 100%;
+            flex-direction: column-reverse;
+            }
             .simple_info{
                 flex: 60%;
-                font-size: 1rem;
+                
+                 @media screen and (max-width:800px) {
+                    text-align: center;
+                  
+                 }
                 p{
-                    &:nth-child(1){
+                   &:nth-child(1){
                         font-size: 2rem;
-                        padding-bottom: 5rem;
+                        padding-bottom: 4rem;
+                        @media screen and (max-width:800px) {
+                            font-size: 1.2rem;
+                            padding-top: 1rem;
+                            padding-bottom: 1rem;
+                        }
                     }
                     &:nth-child(2){
                         font-size: 1rem;
+                        @media screen and (max-width:800px) {
+                            font-size: .7rem;
+                            
+                        }
                     }
                 }
             }

@@ -1,12 +1,21 @@
 .search_form{
     margin: 2rem 0;
     text-align: end;
+    @media screen and (max-width:800px) {
+        text-align: center;
+    }
     input{
+        width: 23%;
         border: none;
         border-bottom: 2px solid gray;
         outline: none;
-        padding: 5px 0;
+        padding: .4rem 0;
         font-size: 1.2rem;
         margin-bottom: 2rem;
+        @media screen and (max-width:800px) {
+        text-align: center;
+        width: 80%;
+        font-size: .5rem;
+    }
     }
 }

@@ -5,6 +5,9 @@
         font-size: 3rem;
         padding: 5rem 0;
         text-align: center;
+        @media screen and (max-width:800px){
+            padding: 1.8rem 0;
+        }
         span{
             color: #8e7cf8;
         }
@@ -27,11 +30,17 @@
         .like_box{
             display: flex;
             height: 200px;
-            line-height: 200px;
+            
             font-size: 1rem;
+            @media screen and (max-width:800px) {
+            font-size: .7rem;
+                height: 100px;
+            }
             .num{
                 flex: 10%;
-                text-align: center;
+                justify-content: center;
+                align-items: center;
+                display: flex;
             }
             .like_img{
                 display: flex;
@@ -41,19 +50,35 @@
                 img{
                     height: 90%;
                     text-align: center;
+                    @media screen and (max-width:800px) {
+            height: 70%;
+            }
                 }
             }
             .like_name{
                 flex: 40%;
                 font-size: 1.5rem;
+                padding-left: .5rem;
+                align-items: center;
+                display: flex;
+                @media screen and (max-width:800px) {
+                font-size: .7rem;
+                
+            }
             }
             .like_detail{
                 flex: 10%;
+                justify-content: center;
+                align-items: center;
+                display: flex;
                 &:hover{
                     text-decoration: underline;
                 }
             }
             .like_remove{
+                justify-content: center;
+                align-items: center;
+                display: flex;
                 flex: 20%;
                 cursor: pointer;
                 &:hover{

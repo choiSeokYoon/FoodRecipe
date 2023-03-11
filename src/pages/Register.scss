@@ -11,6 +11,9 @@
             font-size: 3rem;
             padding: 5rem 0;
             text-align: center;
+            @media screen and (max-width:800px){
+            padding: 1.8rem 0;
+            }
         }
         .register_form{
             .input_field{
