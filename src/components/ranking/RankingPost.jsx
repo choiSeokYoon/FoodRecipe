@@ -2,6 +2,7 @@
 import { useRecoilValue } from 'recoil';
 import { fetchPostData } from '../../recoil/selector';
 import './RankingPost.scss';
+import { Link } from 'react-router-dom';
 
 export default function RankingPost() {
   const posts = useRecoilValue(fetchPostData)
@@ -33,7 +34,9 @@ export default function RankingPost() {
                 <div className="ranking_img">
                   <img src={item.ATT_FILE_NO_MAIN} alt="" />
                 </div>
-                <div className="ranking_title">{item.RCP_NM}</div>
+                <Link to={`/detail/${item.RCP_NM}`} className="ranking_title">
+                  <p>{item.RCP_NM}</p>
+                </Link>
                 <div className="ranking_nutriment">{item.INFO_ENG}</div>
                 <div className="food_type">{item.RCP_PAT2}</div>
                 <div className="food_tag">{item.HASH_TAG}</div>

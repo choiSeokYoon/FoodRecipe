@@ -33,14 +33,12 @@ export default function Navbar() {
         <ul className='nav_end'>
           <li onClick={handleLogout}><Link to="/">Logout</Link></li>
           <li><Link to="/posts"><BiSearchAlt/></Link> </li>
-          <li><a href=""></a> <SiKakaotalk/></li>
           <li><a href="https://github.com/choiSeokYoon"><AiFillGithub/></a></li>
         </ul>
       ) : (
           <ul className='nav_end'>
             <li><Link to="/login">login</Link> </li>
             <li><Link to="/posts"><BiSearchAlt/></Link> </li>
-            <li><a href=""></a> <SiKakaotalk/></li>
             <li><a href="https://github.com/choiSeokYoon"><AiFillGithub/></a></li>
         </ul>
       ) }

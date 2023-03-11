@@ -1,0 +1,58 @@
+.register{
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+    .register_container{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px 0 15px;
+        .title{
+            font-size: 3rem;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .register_form{
+            .input_field{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0;
+                input{
+                    height: 45px;
+                    width: 100%;
+                    border: 0;
+                    border-bottom: 2px #000 solid;
+                    padding: 0 0 0 1.5rem;
+                    background: rgba(255,255,255,0.1);
+                }
+            }
+            .register_btn{
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 0;
+                .register_submit{
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 15px;
+                    height: 45px;
+                    outline: none;
+                    background: #e7ddc9;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transform: .3s;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    a{
+                        text-align: end;
+                        padding: .5rem 0;
+                        font-size: 1rem;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+            }
+        }
+    }
+}
