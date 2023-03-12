@@ -10,15 +10,30 @@ import { useState } from "react";
 export default function Navbar() {
   const [authUser, setAuthUser] = useRecoilState(recoilAuthUser);
   const [active, setActive] = useState(false);
+  const [selected, setSelected] = useState(0)
+
+  const menuList = [
+    { title: "다이어트", link: "/ranking" },
+    { title: "레시피", link: "/posts" },
+    { title: "찜목록", link: "/like" },
+  ];
+
+  const handleSelect = (idx) => {
+    setSelected(idx === selected ? null : idx);
+  }
+
   const handleLogout = () => {
     setAuthUser(null);
   };
+
 
   return (
     <div className="navbar">
       <div className="logo">
         <h2>
-          <Link to="/">한식레시피</Link>
+          <Link to="/" onClick={() => setSelected(null)}>
+            한식레시피
+          </Link>
         </h2>
       </div>
       <div
@@ -31,21 +46,25 @@ export default function Navbar() {
       </div>
 
       <ul className="nav_menu">
-        <li>
-          <Link to="/ranking">다이어트</Link>{" "}
-        </li>
-        <li>
-          <Link to="/posts">레시피</Link>{" "}
-        </li>
-        <li>
-          <Link to="/like">찜목록</Link>{" "}
-        </li>
+        {menuList.map((item, idx) => (
+          <li
+            key={idx}
+            className={idx === selected ? "select" : ""}
+            onClick={() => {
+              handleSelect(idx);
+            }}
+          >
+            <Link to={item.link}>{item.title}</Link>
+          </li>
+        ))}
       </ul>
 
       {authUser ? (
         <ul className="nav_end">
           <li onClick={handleLogout}>
-            <Link to="/">Logout</Link>
+            <Link to="/" onClick={() => setSelected(null)}>
+              Logout
+            </Link>
           </li>
           <li>
             <Link to="/posts">
@@ -61,10 +80,12 @@ export default function Navbar() {
       ) : (
         <ul className="nav_end">
           <li>
-            <Link to="/login">login</Link>{" "}
+            <Link to="/login" onClick={() => setSelected(null)}>
+              login
+            </Link>{" "}
           </li>
           <li>
-            <Link to="/posts">
+            <Link to="/posts" onClick={() => setSelected(1)}>
               <BiSearchAlt />
             </Link>{" "}
           </li>
