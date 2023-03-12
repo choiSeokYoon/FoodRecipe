@@ -28,7 +28,7 @@ export default function Section2() {
     <div className="section2">
       <div className="container">
         <div className="title">
-          <h1>간편 레시피</h1>
+          <h1>Simple&Complex</h1>
         </div>
         <div className="simple_recipe">
           <div className="simple_left">
@@ -62,9 +62,13 @@ export default function Section2() {
           </div>
           <div className="simple_right">
             <div className="simple_info">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Simple Recipe</p>
               <p>
-                데이터에서 재료가 가장 짧은 순서대로 8개를 뽑아 배치했습니다.
+                최소한의 재료로 만드는 간편하고 간단한 음식을 추천해드립니다.
+                이러한 레시피는 준비가 간단하고 시간도 적게 걸리기 때문에 바쁜
+                일상 속에서도 쉽게 식사를 챙길 수 있습니다. 단, 요리를 할 때는
+                안전에 항상 주의를 기울이고, 필요한 조리 도구와 재료를 미리
+                준비해두는 것이 좋습니다. 즐거운 요리 시간 보내세요!
               </p>
             </div>
             <div className="simple_slide">

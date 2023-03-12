@@ -21,14 +21,15 @@ export default function Section2() {
 
   //RCP_PARTS_DTLS 의 밸류값 (문자열)이 짧은 순
   const postsSort = [...posts].sort((a, b) => {
-    return a.RCP_PARTS_DTLS.length - b.RCP_PARTS_DTLS.length;
+    return b.RCP_PARTS_DTLS.length - a.RCP_PARTS_DTLS.length;
   });
-  const simpleRecipe = postsSort.slice(0, 8);
+  const complexRecipe = postsSort.slice(0, 8);
+
   return (
     <div className="section3">
       <div className="container">
-        <div className="simple_recipe">
-          <div className="simple_left">
+        <div className="complex_recipe">
+          <div className="complex_right">
             <Swiper
               style={{
                 "--swiper-navigation-color": "#fff",
@@ -48,7 +49,7 @@ export default function Section2() {
               modules={[FreeMode, Navigation, Thumbs, Pagination, Autoplay]}
               className="mySwiper2"
             >
-              {simpleRecipe.map((item, idx) => (
+              {complexRecipe.map((item, idx) => (
                 <SwiperSlide key={idx}>
                   <Link to={`/detail/${item.RCP_NM}`}>
                     <img src={item.ATT_FILE_NO_MAIN} />
@@ -57,12 +58,18 @@ export default function Section2() {
               ))}
             </Swiper>
           </div>
-          <div className="simple_right">
-            <div className="simple_info">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <div className="complex_left">
+            <div className="complex_info">
+              <p>Complex Recipe</p>
+              <p>
+                복잡하고 어려운 레시피를 시도하는 것은 재미있는 경험이 될 수
+                있습니다. 하지만 초보자라면 천천히 단계별로 따라가면서
+                시도해보는 것이 좋습니다. 음식을 만들 때는 안전에 항상 주의를
+                기울이고, 필요한 조리 도구와 재료를 미리 준비하는 것이 좋습니다.
+                즐거운 요리 시간 보내세요!
+              </p>
             </div>
-            <div className="simple_slide">
+            <div className="complex_slide">
               <Swiper
                 onSwiper={setThumbsSwiper}
                 spaceBetween={10}
@@ -71,9 +78,9 @@ export default function Section2() {
                 modules={[FreeMode, Navigation, Thumbs, Pagination]}
                 className="mySwiper"
               >
-                {simpleRecipe.map((item, idx) => (
+                {complexRecipe.map((item, idx) => (
                   <SwiperSlide key={idx}>
-                    <div className="simple_slide_box">
+                    <div className="complex_slide_box">
                       <img src={item.ATT_FILE_NO_MAIN} />
                       <p>{item.RCP_NM}</p>
                     </div>
