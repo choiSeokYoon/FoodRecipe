@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import './Section3.scss'
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { fetchPostData } from './../recoil/selector';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import "./Section3.scss";
+import {  useRecoilValue } from "recoil";
+import { fetchPostData } from "./../recoil/selector";
+import { Link } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,81 +12,78 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-
 // import required modules
-import { FreeMode, Navigation, Thumbs , Pagination , Autoplay } from "swiper";
+import { FreeMode, Navigation, Thumbs, Pagination, Autoplay } from "swiper";
 
 export default function Section2() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const posts = useRecoilValue(fetchPostData)
+  const posts = useRecoilValue(fetchPostData);
 
-    //RCP_PARTS_DTLS 의 밸류값 (문자열)이 짧은 순
-    const postsSort = [...posts].sort((a, b) => { 
-        return a.RCP_PARTS_DTLS.length - b.RCP_PARTS_DTLS.length
-    })
-    const simpleRecipe = postsSort.slice(0,8)
+  //RCP_PARTS_DTLS 의 밸류값 (문자열)이 짧은 순
+  const postsSort = [...posts].sort((a, b) => {
+    return a.RCP_PARTS_DTLS.length - b.RCP_PARTS_DTLS.length;
+  });
+  const simpleRecipe = postsSort.slice(0, 8);
   return (
-    <div className='section3'>
-        <div className='container'>
-            
-            <div className='simple_recipe'>
-              <div className='simple_left'>
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                }}
-                spaceBetween={10}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                pagination={{
-                  type: "fraction",
-                  clickable: true,
-                }}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs, Pagination, Autoplay]}
-                className="mySwiper2"
-              >
-              {simpleRecipe.map((item,idx)=>(
+    <div className="section3">
+      <div className="container">
+        <div className="simple_recipe">
+          <div className="simple_left">
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              spaceBetween={10}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                type: "fraction",
+                clickable: true,
+              }}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[FreeMode, Navigation, Thumbs, Pagination, Autoplay]}
+              className="mySwiper2"
+            >
+              {simpleRecipe.map((item, idx) => (
                 <SwiperSlide key={idx}>
                   <Link to={`/detail/${item.RCP_NM}`}>
                     <img src={item.ATT_FILE_NO_MAIN} />
                   </Link>
                 </SwiperSlide>
               ))}
-              </Swiper>
+            </Swiper>
+          </div>
+          <div className="simple_right">
+            <div className="simple_info">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             </div>
-              <div className='simple_right'>
-                <div className='simple_info'>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
-                </div>
-                <div className='simple_slide'>
-                  <Swiper
-                    onSwiper={setThumbsSwiper}
-                    spaceBetween={10}
-                    slidesPerView={4}
-                    loop={true}
-                    modules={[FreeMode, Navigation, Thumbs, Pagination]}
-                    className="mySwiper"
-                  >
-                  {simpleRecipe.map((item,idx)=>(
-                    <SwiperSlide key={idx}>
-                      <div className='simple_slide_box'>
-                        <img src={item.ATT_FILE_NO_MAIN} />
-                        <p>{item.RCP_NM}</p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-                
+            <div className="simple_slide">
+              <Swiper
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={4}
+                loop={true}
+                modules={[FreeMode, Navigation, Thumbs, Pagination]}
+                className="mySwiper"
+              >
+                {simpleRecipe.map((item, idx) => (
+                  <SwiperSlide key={idx}>
+                    <div className="simple_slide_box">
+                      <img src={item.ATT_FILE_NO_MAIN} />
+                      <p>{item.RCP_NM}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }

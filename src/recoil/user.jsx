@@ -1,12 +1,11 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
 
 export const recoilUserList = atom({
   key: "userListState",
   default: [],
 });
 
-
 export const recoilAuthUser = atom({
-  key: 'authUser',
+  key: "authUser",
   default: true,
 });

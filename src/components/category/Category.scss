@@ -1,14 +1,15 @@
-.category{
-    
+.category {
+
     height: 40px;
     display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
     @media screen and (max-width:800px) {
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 5rem;
     }
-    li{
+
+    li {
         margin: 0 1rem;
         text-align: center;
         line-height: 40px;
@@ -16,14 +17,17 @@
         transition: .5s;
         font-size: 1rem;
         border-radius: 20px;
-        @media screen and (max-width:800px){
-             font-size: .7rem;
+
+        @media screen and (max-width:800px) {
+            font-size: .7rem;
         }
-        &:hover{
+
+        &:hover {
             background: #ddd;
         }
     }
-    .active{
+
+    .active {
         background: #ddd;
     }
 }

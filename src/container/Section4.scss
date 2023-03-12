@@ -1,30 +1,32 @@
-.banner {
+.section4 {
     height: auto;
     background: #f8f7e5;
-    .banner_img{
+
+    .section4_img {
         display: flex;
+
         @media screen and (max-width:800px) {
-        flex-direction: column;
-    }
-        .banner_left{
+            flex-direction: column;
+        }
+
+        .section4_left {
             flex: 50%;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
-        .baneer_right{
+
+        .section4_right {
             flex: 50%;
             display: grid;
             grid-template-columns: repeat(2, 2fr);
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
     }
 }
-
-  
-
-  

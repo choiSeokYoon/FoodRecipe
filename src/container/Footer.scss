@@ -1,26 +1,29 @@
-.footer{
+.footer {
     background: #ddd;
     height: auto;
     width: 100%;
-    
-    bottom: 0;
-    
-    .foonter_box{
+    position: relative;
+
+
+    .foonter_box {
         display: flex;
-        
+
         flex-direction: column;
         text-align: center;
-        p{
+
+        p {
             font-size: 1rem;
             padding-top: 1rem;
-            &:last-child{
+
+            &:last-child {
                 padding-bottom: 1rem;
             }
+
             @media screen and (max-width:700px) {
-                    font-size: .5rem;
-                  
+                font-size: .5rem;
+
             }
         }
-        
+
     }
 }

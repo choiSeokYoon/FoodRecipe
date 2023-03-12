@@ -1,49 +1,58 @@
-.login{
+.login {
     display: flex;
     justify-content: center;
-    min-height: 70vh;
-    
-    .login_container{
+    width: 100%;
+
+    min-height: 100%;
+
+    .login_container {
         width: 300px;
         display: flex;
         flex-direction: column;
         padding: 0 15px 0 15px;
-        .title{
+
+        .title {
             font-size: 3rem;
             padding: 5rem 0;
             text-align: center;
-            @media screen and (max-width:800px){
-            padding: 1.8rem 0;
+
+            @media screen and (max-width:800px) {
+                padding: 1.8rem 0;
+            }
+
         }
-            
-        }
-        .login_form{
-            
-            .input_field{
+
+        .login_form {
+
+            .input_field {
                 display: flex;
                 flex-direction: column;
                 padding: 0.5rem 0;
-                input{
+
+                input {
                     height: 45px;
                     width: 100%;
                     border: 0;
                     border-bottom: 2px #000 solid;
-                    
+
                     padding: 0 0 0 1.5rem;
-                    background: rgba(255,255,255,0.1);
-                    
+                    background: rgba(255, 255, 255, 0.1);
+
                 }
             }
-            .login_btn{
+
+            .login_btn {
                 display: flex;
                 flex-direction: column;
                 padding: 1rem 0;
-                p{
+
+                p {
                     color: rgb(202, 75, 75);
                     padding-top: .2rem;
                 }
-                .login_submit{
-                    
+
+                .login_submit {
+
                     border: none;
                     border-radius: 5px;
                     font-size: 15px;
@@ -51,32 +60,36 @@
                     outline: none;
                     background: #e7ddc9;
                     font-weight: bold;
-                cursor: pointer;
-                transform: .3s;
-                    &:hover{
+                    cursor: pointer;
+                    transform: .3s;
+
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
-                div{
+
+                div {
                     display: flex;
                     justify-content: space-between;
-                    
+
                     padding: 1rem 0;
-                    span{
+
+                    span {
                         font-size: 1.1rem;
                     }
-                    .login_register{
-                        
+
+                    .login_register {
+
                         font-size: 1.1rem;
-                        
-                        &:hover{
+
+                        &:hover {
                             text-decoration: underline;
                         }
-                    }   
+                    }
                 }
-                
+
             }
-            
+
         }
     }
 }

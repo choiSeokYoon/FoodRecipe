@@ -1,87 +1,107 @@
-.wishList{
+.wishList {
     width: 100%;
     height: auto;
-    .title{
+    min-height: 100%;
+
+    .title {
         font-size: 3rem;
         padding: 5rem 0;
         text-align: center;
-        @media screen and (max-width:800px){
+
+        @media screen and (max-width:800px) {
             padding: 1.8rem 0;
         }
-        span{
+
+        span {
             color: #8e7cf8;
         }
-        h2{
+
+        h2 {
             font-size: 2rem;
             margin-top: 3rem;
-            
+
         }
     }
-    .empty{
+
+    .empty {
         text-align: center;
         font-size: 1.5rem;
         line-height: 150%;
         margin-bottom: 300px;
     }
-    .like_list{
+
+    .like_list {
         display: flex;
         flex-direction: column;
         margin-bottom: 100px;
-        .like_box{
+
+        .like_box {
             display: flex;
             height: 200px;
-            
+
             font-size: 1rem;
+
             @media screen and (max-width:800px) {
-            font-size: .7rem;
+                font-size: .7rem;
                 height: 100px;
             }
-            .num{
+
+            .num {
                 flex: 10%;
                 justify-content: center;
                 align-items: center;
                 display: flex;
             }
-            .like_img{
+
+            .like_img {
                 display: flex;
                 align-items: center;
                 flex: 20%;
                 justify-content: center;
-                img{
+
+                img {
                     height: 90%;
                     text-align: center;
+                    border-radius: 10px;
+
                     @media screen and (max-width:800px) {
-            height: 70%;
-            }
+                        height: 70%;
+                    }
                 }
             }
-            .like_name{
+
+            .like_name {
                 flex: 40%;
                 font-size: 1.5rem;
                 padding-left: .5rem;
                 align-items: center;
                 display: flex;
+
                 @media screen and (max-width:800px) {
-                font-size: .7rem;
-                
+                    font-size: .7rem;
+
+                }
             }
-            }
-            .like_detail{
+
+            .like_detail {
                 flex: 10%;
                 justify-content: center;
                 align-items: center;
                 display: flex;
-                &:hover{
+
+                &:hover {
                     text-decoration: underline;
                 }
             }
-            .like_remove{
+
+            .like_remove {
                 justify-content: center;
                 align-items: center;
                 display: flex;
                 flex: 20%;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     text-decoration: underline;
                 }
             }

@@ -5,12 +5,12 @@ import Detail from './pages/Detail'
 import Loading from './components/loader/Loading';
 import React, {Suspense} from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './app.css'
 import Posts from './pages/Posts';
 import Ranking from './pages/Ranking';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import WishList from './pages/WishList';
+import "./app.css";
 
 
 function App() { 
