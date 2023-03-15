@@ -13,7 +13,7 @@ export default function Navbar() {
   const [selected, setSelected] = useState(0)
 
   const menuList = [
-    { title: "다이어트", link: "/ranking" },
+    { title: "다이어트", link: "/diet" },
     { title: "레시피", link: "/posts" },
     { title: "찜목록", link: "/like" },
   ];
@@ -100,7 +100,7 @@ export default function Navbar() {
         <div className="mobil_menu">
           <ul className="toggle_menu">
             <li>
-              <Link to="/ranking">다이어트</Link>{" "}
+              <Link to="/diet">다이어트</Link>{" "}
             </li>
             <li>
               <Link to="/posts">레시피</Link>{" "}

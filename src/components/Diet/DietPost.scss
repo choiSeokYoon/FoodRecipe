@@ -1,4 +1,4 @@
-.ranking_posts {
+.diet_posts {
     .title {
         font-size: 3rem;
         padding: 5rem 0;
@@ -9,22 +9,22 @@
         }
     }
 
-    .ranking_box {
+    .diet_box {
         display: flex;
         width: 100%;
 
-        .ranking_table {
+        .diet_table {
             flex: 70%;
 
             display: flex;
             flex-direction: column;
             margin-bottom: 100px;
 
-            .ranking_table_top {
+            .diet_table_top {
                 background: #ddd;
                 border-radius: 20px;
 
-                .ranking_img {
+                .diet_img {
                     flex: 10%;
                     font-size: 1rem;
 
@@ -34,7 +34,7 @@
                     }
                 }
 
-                .ranking_title {
+                .diet_title {
                     text-align: center;
                 }
             }
@@ -66,7 +66,7 @@
                     }
                 }
 
-                .ranking_img {
+                .diet_img {
                     flex: 10%;
                     text-align: center;
 
@@ -82,7 +82,7 @@
                     }
                 }
 
-                .ranking_title {
+                .diet_title {
                     flex: 32%;
                     padding-left: 3rem;
                     font-size: 1rem;
@@ -98,7 +98,7 @@
                     }
                 }
 
-                .ranking_nutriment {
+                .diet_nutriment {
                     flex: 16%;
                     text-align: center;
                     font-size: 1rem;
@@ -130,7 +130,7 @@
             }
         }
 
-        .ranking_category {
+        .diet_category {
             flex: 20%;
         }
     }
