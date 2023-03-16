@@ -7,11 +7,11 @@ import "./WishList.scss";
 export default function WishList() {
   const [like, setLike] = useRecoilState(recoilUserCart);
   const [authUser, setAuthUser] = useRecoilState(recoilAuthUser);
-  const handleRemove = (idx) => {
+  const handleRemove = (idx:number) => {
     const newLike = like.filter((item, index) => index !== idx);
     setLike(newLike);
   };
-
+  console.log(like)
   return (
     <div className="wishList">
       <div className="container">

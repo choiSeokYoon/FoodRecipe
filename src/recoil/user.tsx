@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 import {recoilPersist} from "recoil-persist"
+import { IUser } from "../type/user.type";
 
 const {persistAtom} =recoilPersist()
 

@@ -11,7 +11,7 @@ export default function Navbar() {
   const [authUser, setAuthUser] = useRecoilState(recoilAuthUser);
   const [active, setActive] = useState(false);
   const [selected, setSelected] = useState(0)
-
+  
   const menuList = [
     { title: "다이어트", link: "/diet" },
     { title: "레시피", link: "/posts" },

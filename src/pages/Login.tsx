@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { recoilAuthUser } from "../recoil/user";
+import { IUser } from "../type/user.type";
 import "./Login.scss";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const [authUser, setAuthUser] = useRecoilState(recoilAuthUser);
 
-  const handleLogin = (e) => {
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
 
@@ -22,9 +23,9 @@ export default function Login() {
     }
 
     // 인증 수행
-    const userList = JSON.parse(localStorage.getItem("users")) || [];
+    const userList = JSON.parse(localStorage.getItem("users") || "[]");
     const user = userList.find(
-      (user) => user.email === email && user.password === password
+      (user: IUser) => user.email === email && user.password === password
     );
 
     if (!user) {

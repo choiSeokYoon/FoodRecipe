@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useResetRecoilState } from "recoil";
 import { recoilUserList } from "../recoil/user";
+import { IUser } from "../type/user.type";
 import "./Register.scss";
 export default function Register() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const setUserList = useResetRecoilState(recoilUserList);
-  const handleSignup = (e) => {
+  const handleSignup = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setSuccess(false);
@@ -25,9 +26,9 @@ export default function Register() {
 
     //업데이트
     const newUser = { email, password, name };
-    const userList = JSON.parse(localStorage.getItem("users")) || [];
+    const userList = JSON.parse(localStorage.getItem("users") || "[]");
 
-    const existingUser = userList.find((user) => user.email === email);
+    const existingUser = userList.find((user: IUser) => user.email === email);
     if (existingUser) {
       setError("이미 있는 이메일입니다.");
       return;
@@ -35,11 +36,10 @@ export default function Register() {
 
     const updatedUserList = [...userList, newUser];
     localStorage.setItem("users", JSON.stringify(updatedUserList));
-    setUserList(updatedUserList);
     setSuccess(true);
     navigate("/login");
   };
-
+  
   return (
     <div className="register">
       <div className="register_container">

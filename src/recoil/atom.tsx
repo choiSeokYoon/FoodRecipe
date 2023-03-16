@@ -1,4 +1,6 @@
 import { atom } from "recoil";
+import { ICartItem, IData } from './../type/data.type';
+import { IUser } from './../type/user.type';
 
 //검색기능을 담는
 export const foodSearchAtom = atom({
@@ -22,12 +24,12 @@ export const recoilPageCount = atom({
 });
 
 //디테일 api
-export const recoilDetailData = atom({
+export const recoilDetailData = atom<IData>({
   key: "recoilDetailData",
   default: undefined,
 });
 
-export const recoilUserCart = atom({
+export const recoilUserCart = atom<ICartItem[]>({
   key: "recoilUserCart",
   default: [],
 });

@@ -19,7 +19,7 @@ export default function DetailInfo() {
     .sort();
 
   useEffect(() => {
-    const ctx = document.getElementsByClassName("myChart");
+    const ctx = document.querySelector(".myChart") as HTMLCanvasElement;
     if (teb === 2 && ctx) {
       const myChart = new Chart(ctx, {
         type: "pie",
