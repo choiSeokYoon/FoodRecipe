@@ -1,7 +1,7 @@
 import { selector } from "recoil";
 import axios from "axios";
 
-const url = `https://openapi.foodsafetykorea.go.kr/api/2996df137a4d4756867f/COOKRCP01/json/1/200`;
+const url = `https://openapi.foodsafetykorea.go.kr/api/2996df137a4d4756867f/COOKRCP01/json/1/100`;
 export const fetchPostData = selector({
   key: "fetchPostData",
   get: async ({ get }) => {
