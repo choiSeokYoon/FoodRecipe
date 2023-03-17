@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [authUser, setAuthUser] = useRecoilState(recoilAuthUser);
   const [active, setActive] = useState(false);
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState<number | null>(0)
   
   const menuList = [
     { title: "다이어트", link: "/diet" },
@@ -18,7 +18,7 @@ export default function Navbar() {
     { title: "찜목록", link: "/like" },
   ];
 
-  const handleSelect = (idx) => {
+  const handleSelect = (idx:number) => {
     setSelected(idx === selected ? null : idx);
   }
 

@@ -67,6 +67,7 @@ export default function Posts() {
           <Paging filteredData={filteredData} />
         </div>
       </div>
+      
     )
   );
 }

@@ -12,8 +12,9 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+
+
 
 export default function RandomPosts() {
   const posts = useRecoilValue(fetchPostData);
@@ -27,7 +28,7 @@ export default function RandomPosts() {
 
   //배열로 반환하고 변수에 담음
   const randomRecipe = Array.from(recipe);
-
+  console.log(recipe)
   return (
     <div className="section1">
       <div className="slide">
@@ -52,7 +53,7 @@ export default function RandomPosts() {
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="slide_box"
         >
-          {randomRecipe.map((item, idx) => (
+          {randomRecipe.map((item:any, idx) => (
             <SwiperSlide key={idx}>
               <Link to={`/detail/${item.RCP_NM}`}>
                 <img src={item.ATT_FILE_NO_MAIN} />
