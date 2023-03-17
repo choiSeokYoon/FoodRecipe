@@ -28,7 +28,7 @@ export default function WishList() {
               <div className="empty">
                 찜 목록이 비어 있습니다.
                 <br />
-                레시피를 추가해주세요
+                레시피 페이지에서 하트를 눌러주세요
               </div>
             ) : (
               <ul className="like_list">
