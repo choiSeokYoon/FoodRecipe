@@ -5,10 +5,10 @@ import { useEffect, useRef } from "react";
 
 export default function SearchForm() {
   const [searchKeyword, setSearchKeyword] = useRecoilState(foodSearchAtom);
-  const searchInputRef = useRef(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   //페이지가 바뀌면 바로 포커스를 줬음
   useEffect(() => {
-    searchInputRef.current.focus();
+    searchInputRef.current?.focus();
   }, []);
 
   return (

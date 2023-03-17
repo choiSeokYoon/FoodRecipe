@@ -1,10 +1,15 @@
 import { useState } from "react";
 import "./Category.scss";
 
-export default function Category({ categories, setCategory }) {
+
+type ICategoryProps = {
+  categories: string[];
+  setCategory: (category: string) => void;
+};
+export default function Category({ categories, setCategory }: ICategoryProps) {
   const [active, setActive] = useState(0);
 
-  const handleClick = (idx) => {
+  const handleClick = (idx:number) => {
     setActive(idx);
     setCategory(categories[idx]);
   };

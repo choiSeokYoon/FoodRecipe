@@ -3,8 +3,13 @@ import { recoilPostsPage, recoilLimit } from "../../recoil/atom";
 import "./Paging.scss";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
+import { IData } from "../../type/data.type";
 
-export default function Paging({ filteredData }) {
+type IFilteredDataProps = {
+  filteredData:IData[]
+}
+
+export default function Paging({ filteredData }:IFilteredDataProps) {
   const RecipePost = filteredData.length;
   const limit = useRecoilValue(recoilLimit);
   const [postsPage, setPostsPage] = useRecoilState(recoilPostsPage);
@@ -20,7 +25,7 @@ export default function Paging({ filteredData }) {
         <GrFormPrevious />
       </button>
       {Array(numPages)
-        .fill()
+        .fill(null)
         .map((_, idx) => (
           <button
             key={idx + 1}
@@ -28,7 +33,7 @@ export default function Paging({ filteredData }) {
               postsPage === idx + 1 ? "pagination_btn active" : "pagination_btn"
             }
             onClick={() => setPostsPage(idx + 1)}
-            aria-current={postsPage === idx + 1 ? "postsPage" : null}
+            aria-current={postsPage === idx + 1 ? "page" : undefined}
           >
             {idx + 1}
           </button>
