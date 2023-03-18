@@ -11,7 +11,6 @@ export default function WishList() {
     const newLike = like.filter((item, index) => index !== idx);
     setLike(newLike);
   };
-  console.log(like)
   return (
     <div className="wishList">
       <div className="container">

@@ -4,11 +4,11 @@ import "./Section1.scss";
 
 export default function Section1() {
   return (
-    <div className="Section1">
+    <section className="Section1">
       <div className="title">
         <h1>추천 레시피</h1>
       </div>
       <SectionSlide />
-    </div>
+    </section>
   );
 }

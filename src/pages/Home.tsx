@@ -7,12 +7,12 @@ import Section4 from "../container/Section4";
 export default function Home() {
   return (
     <>
-      <div className="main_contents">
+      <main className="main_contents">
         <Section1 />
         <Section2 />
         <Section3 />
         <Section4 />
-      </div>
+      </main>
     </>
   );
 }

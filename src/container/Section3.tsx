@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Section3.scss";
-import {  useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 import { fetchPostData } from "../recoil/selector";
 import { Link } from "react-router-dom";
 // Import Swiper React components
@@ -20,7 +20,7 @@ export default function Section2() {
   type Swiper = any; //스와이퍼가 어떤 타입인지 못찾음 나중에라도 찾아서 해결해야지 ㅠㅠ
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>(null);
   const posts = useRecoilValue(fetchPostData);
-  
+
   //RCP_PARTS_DTLS 의 밸류값 (문자열)이 짧은 순
   const postsSort = [...posts].sort((a, b) => {
     return b.RCP_PARTS_DTLS.length - a.RCP_PARTS_DTLS.length;
@@ -28,12 +28,12 @@ export default function Section2() {
   const complexRecipe = postsSort.slice(0, 8);
 
   return (
-    <div className="section3">
+    <section className="section3">
       <div className="container">
         <div className="complex_recipe">
           <div className="complex_right">
             <Swiper
-              
+
               spaceBetween={10}
               autoplay={{
                 delay: 2000,
@@ -90,6 +90,6 @@ export default function Section2() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

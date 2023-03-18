@@ -28,7 +28,6 @@ export default function RandomPosts() {
 
   //배열로 반환하고 변수에 담음
   const randomRecipe = Array.from(recipe);
-  console.log(recipe)
   return (
     <div className="section1">
       <div className="slide">
@@ -63,8 +62,8 @@ export default function RandomPosts() {
         </Swiper>
       </div>
       <p>
-        오늘의 추천레시피 {randomRecipe.length}개 오늘은 집에서 만들어 드시는건
-        어떨까요?{" "}
+        추천레시피 오늘은 집에서 만들어 드시는건
+        어떨까요?
       </p>
     </div>
   );

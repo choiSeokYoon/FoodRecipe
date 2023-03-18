@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="container">
         <div className="foonter_box">
           <p>오늘의 한식</p>
@@ -13,6 +13,6 @@ export default function Footer() {
           <p>© Copyright 2023, Seok yoon.</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

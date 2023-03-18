@@ -9,10 +9,10 @@ export default function Header() {
         })
     }) */
   return (
-    <div className="header" /* {scroll ? "header active" : "header"} */>
+    <header className="header" /* {scroll ? "header active" : "header"} */>
       <div className="container">
         <Navbar />
       </div>
-    </div>
+    </header>
   );
 }

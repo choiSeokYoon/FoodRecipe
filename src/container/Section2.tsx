@@ -26,7 +26,7 @@ export default function Section2() {
   });
   const simpleRecipe = postsSort.slice(0, 8);
   return (
-    <div className="section2">
+    <section className="section2">
       <div className="container">
         <div className="title">
           <h1>Simple&Complex</h1>
@@ -91,6 +91,6 @@ export default function Section2() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
