@@ -16,7 +16,7 @@ export default function DetailPost() {
     const detailData = async () => {
       try {
         const json = await axios.get(
-          `https://openapi.foodsafetykorea.go.kr/api/2996df137a4d4756867f/COOKRCP01/json/1/100/RCP_NM=${id}`
+          `${process.env.REACT_APP_API_URL}/COOKRCP01/json/1/100/RCP_NM=${id}`
         );
         setDetailPosts(json.data.COOKRCP01.row[0]);
       } catch (err) {
