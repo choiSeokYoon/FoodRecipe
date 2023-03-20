@@ -3,6 +3,12 @@
 
 ##### 음식 레시피 편하게 찾을 수 있고 제공하는 사이트 입니다.
 
+<h2>스킬<h2>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
+<img src="https://img.shields.io/badge/Recoil-FF4655?style=flat&logo=Recoil&logoColor=white"/>
+<img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=Sass&logoColor=white"/></br>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
+
 ## 기능
 
 1. 메인 , 회원가입 , 로그인 , 전체레시피 , 찜 , 디테일 , 다이어트 페이지로 구성되어 있습니다.
