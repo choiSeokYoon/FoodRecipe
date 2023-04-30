@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FoodRecipe/static/css/main.466283af.css",
-    "main.js": "/FoodRecipe/static/js/main.87f28bc2.js",
+    "main.css": "/FoodRecipe/static/css/main.bc308d57.css",
+    "main.js": "/FoodRecipe/static/js/main.14ae87ee.js",
     "static/media/main3.jpg": "/FoodRecipe/static/media/main3.30f910efc0abc554dfe5.jpg",
     "static/media/main5.jpg": "/FoodRecipe/static/media/main5.eea80413f2f77fb1b1bd.jpg",
     "static/media/main4.jpg": "/FoodRecipe/static/media/main4.53d7b922acc72e5616fe.jpg",
@@ -10,11 +10,11 @@
     "static/media/heart1.png": "/FoodRecipe/static/media/heart1.c412cbaead4744166c20.png",
     "static/media/heart2.png": "/FoodRecipe/static/media/heart2.556c78a5a9b89d6b2eeb.png",
     "index.html": "/FoodRecipe/index.html",
-    "main.466283af.css.map": "/FoodRecipe/static/css/main.466283af.css.map",
-    "main.87f28bc2.js.map": "/FoodRecipe/static/js/main.87f28bc2.js.map"
+    "main.bc308d57.css.map": "/FoodRecipe/static/css/main.bc308d57.css.map",
+    "main.14ae87ee.js.map": "/FoodRecipe/static/js/main.14ae87ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.466283af.css",
-    "static/js/main.87f28bc2.js"
+    "static/css/main.bc308d57.css",
+    "static/js/main.14ae87ee.js"
   ]
 }
